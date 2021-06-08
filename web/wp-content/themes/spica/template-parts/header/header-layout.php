@@ -5,7 +5,7 @@ $show_title = ( true === get_theme_mod('display_title_and_tagline', true) );
 
 <div class="container-fluid">
     <div class="row header-container align-items-center">
-        <div class="col" align="center">
+        <div class="col">
             <?php if (has_custom_logo() && $show_title) : ?>
                 <div class="site-logo"><?php the_custom_logo(); ?></div>
             <?php endif; ?>
@@ -15,7 +15,7 @@ $show_title = ( true === get_theme_mod('display_title_and_tagline', true) );
             <?php if (has_nav_menu('primary')) : ?>
                 <nav 
                     id="site-navigation" 
-                    class="navbar navbar-expand-lg navbar-light justify-content-end" 
+                    class="navbar navbar-expand-lg navbar-light" 
                     role="navigation" 
                     aria-label="<?php esc_attr_e('Primary menu', 'Studio Spica'); ?>">
                     <button 
