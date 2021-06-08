@@ -2,7 +2,7 @@ Spica Decor new website design. @06.2021
 
 ### Information ##
 
-* This repository stores the Parkering Lygten project.
+* This repository stores the Spica Decor project.
 * Environment variables and configuration files have been applied.
 * Make changes on the new branches.
 * Perform all changes on the local environment. After making sure everything works, commit the changes to the demo version. After approval by the Team Leader, commit the changes to the production version.
