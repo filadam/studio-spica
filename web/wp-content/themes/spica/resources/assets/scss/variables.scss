@@ -1,0 +1,43 @@
+/*
+    File name  : variables.scss
+    Created on : 2021-01-20
+    Author     : Studio Spica
+*/
+
+// Theme default colors
+$primary:   #ffffff !default;
+$secondary: #000000 !default;
+$body-color:    #ffffff;
+
+// Your variable overrides
+// Colors
+
+// Font defaults
+$font-family-base:  'Assistant', sans-serif;
+$font-size-base:    1rem !default;
+
+$font-size-sm:      0.875rem !default;
+$font-size-md:      1.125rem !default;
+$font-size-l:       2.125rem !default;
+$font-size-xl:      3.125rem !default;
+$font-size-price-s: 1.5rem !default;
+$h1-font-size:      $font-size-l;
+
+$font-weight-lighter:         200 !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-medium:          500 !default;
+$font-weight-semibold:        600 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          800 !default;
+
+// Headings
+$headings-margin-bottom:      1rem;
+$headings-font-weight:        $font-weight-semibold;
+
+// Links
+$link-decoration:   none;
+
+// Buttons + Forms
+$input-btn-padding-y:         .375rem !default;
+$input-btn-padding-x:         1rem !default;
