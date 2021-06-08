@@ -1,90 +1,94 @@
 <?php
 /**
- * The base configuration for WordPress
+ * The base configurations of the WordPress.
  *
- * The wp-config.php creation script uses this file during the
- * installation. You don't have to use the web site, you can
- * copy this file to "wp-config.php" and fill in the values.
+ * This file has the following configurations: MySQL settings, Table Prefix,
+ * Secret Keys, and ABSPATH. You can find more information by visiting
+ * {@link http://codex.wordpress.org/Editing_wp-config.php Editing wp-config.php}
+ * Codex page. You can get the MySQL settings from your web host.
  *
- * This file contains the following configurations:
- *
- * * MySQL settings
- * * Secret keys
- * * Database table prefix
- * * ABSPATH
- *
- * @link https://wordpress.org/support/article/editing-wp-config-php/
+ * This file is used by the wp-config.php creation script during the
+ * installation. You don't have to use the web site, you can just copy this file
+ * to "wp-config.php" and fill in the values.
  *
  * @package WordPress
  */
-
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define( 'DB_NAME', 'wp_spica' );
-
-/** MySQL database username */
-define( 'DB_USER', 'root' );
-
-/** MySQL database password */
-define( 'DB_PASSWORD', '' );
-
-/** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
-
-/** Database Charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8mb4' );
-
-/** The Database Collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', '' );
-
-/**#@+
- * Authentication Unique Keys and Salts.
- *
- * Change these to different unique phrases!
- * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
- * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
- *
- * @since 2.6.0
+/**
+ * Include autoloader
  */
-define( 'AUTH_KEY',         '5_FH7l`{QIG]-rmcF8,+);ab@^YN)v6lY<>,i2<Ou#%5{+IvT8M3pe6Hdq=Q*;Xt' );
-define( 'SECURE_AUTH_KEY',  'NvD!E_V&8;XG3-RmZ1:4`ab;WG_mS.J<=CAGT<83EOe$m*`8BarGcmn28mU=5~1P' );
-define( 'LOGGED_IN_KEY',    '_dge?rsBjfN#&HKBV)Ew1}[rxTOyS@xi{s1C~2`n-n^vk,hYVq/RL7&o9R;H)5+*' );
-define( 'NONCE_KEY',        'f@:X4zG$jKe=9&@_mHn_I~~&3hF%Yc,DK]vxn~,ExIo~j8Vdbbg?K;;e3>Dr4IgK' );
-define( 'AUTH_SALT',        '`0!XH&x0i_HJimebBp9,JC5kKk2Zlu8oJCYK6?iAqz15`Ufg~I8a-lSi`asiOLZS' );
-define( 'SECURE_AUTH_SALT', 'M%lY9Bq6FE&c >X@$3tHX ~^FXuXU+,^HB*2FB^N)gBZMX%N~4E56+6^V>_,9sKc' );
-define( 'LOGGED_IN_SALT',   '#@deE-/jV[4<Y 26+TQI{Eq8zfwo@@w_}/Zn/o]mV 4Q!<b68C5Ou6c4SmXcp}Jn' );
-define( 'NONCE_SALT',       'iN$]qRs@gR&pp.;G*r_ofl=*NS[wW#ID</B0Ac]rK}=#Iv7IE!5d<I<r$sV|EX>o' );
+require_once dirname(__DIR__) . '/autoload.php';
 
-/**#@-*/
+/**
+ * Environment
+ * Default: production
+ */
+define('WP_ENV', env('WP_ENV') ?: 'production');
+
+/**
+ * Cache
+ */
+define('WP_CACHE', env('WP_CACHE'));
+
+/**
+ * URLs
+ */
+define('WP_HOME', env('WP_HOME'));
+define('WP_SITEURL', env('WP_SITEURL'));
+
+/**
+ * MySQL Settings - Local DB
+ */
+define('DB_NAME', env('DB_NAME'));
+define('DB_USER', env('DB_USER'));
+define('DB_PASSWORD', env('DB_PASSWORD'));
+define('DB_HOST', env('DB_HOST'));
+define('DB_CHARSET', env('DB_CHARSET'));
+define('DB_COLLATE', '');
 
 /**
  * WordPress Database Table prefix.
- *
- * You can have multiple installations in one database if you give each
- * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix = 'hg4_';
+$table_prefix = env('DB_PREFIX');
 
 /**
- * For developers: WordPress debugging mode.
- *
- * Change this to true to enable the display of notices during development.
- * It is strongly recommended that plugin and theme developers use WP_DEBUG
- * in their development environments.
- *
- * For information on other constants that can be used for debugging,
- * visit the documentation.
- *
- * @link https://wordpress.org/support/article/debugging-in-wordpress/
+ * Authentication Unique Keys and Salts.
  */
-define( 'WP_DEBUG', true );
+define('AUTH_KEY', env('AUTH_KEY'));
+define('SECURE_AUTH_KEY', env('SECURE_AUTH_KEY'));
+define('LOGGED_IN_KEY', env('LOGGED_IN_KEY'));
+define('NONCE_KEY', env('NONCE_KEY'));
+define('AUTH_SALT', env('AUTH_SALT'));
+define('SECURE_AUTH_SALT', env('SECURE_AUTH_SALT'));
+define('LOGGED_IN_SALT', env('LOGGED_IN_SALT'));
+define('NONCE_SALT', env('NONCE_SALT'));
 
-/* That's all, stop editing! Happy publishing. */
-
-/** Absolute path to the WordPress directory. */
-if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', __DIR__ . '/' );
+/**
+ * Debugging Settings
+ */
+if ('production' == WP_ENV) {
+    define('WP_DEBUG', env('WP_DEBUG'));
+    define('WP_DEBUG_LOG', env('WP_DEBUG_LOG'));
+} else {
+    define('WP_DEBUG', env('WP_DEBUG'));
+    define('WP_DEBUG_LOG', env('WP_DEBUG_LOG'));
+    define('WP_DEBUG_DISPLAY', env('WP_DEBUG_DISPLAY'));
 }
 
+/**
+ * Custom Settings
+ */
+// Disable All Updates
+define('AUTOMATIC_UPDATER_DISABLED', true);
+// Disable the plugin and theme file editor in the admin
+define('DISALLOW_FILE_EDIT', true);
+// Enable dark mode for Query Monitor's interface.
+define('QM_DARK_MODE', true);
+
+/* That's all, stop editing! Happy blogging. */
+
+/** Absolute path to the WordPress directory. */
+if (!defined('ABSPATH'))
+    define('ABSPATH', dirname(__FILE__) . '/');
+
 /** Sets up WordPress vars and included files. */
-require_once ABSPATH . 'wp-settings.php';
+require_once(ABSPATH . 'wp-settings.php');
