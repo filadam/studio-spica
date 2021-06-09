@@ -1,0 +1,47 @@
+/*
+    File name  : general.scss
+    Created on : 2021-01-20
+    Author     : Web Solutions WEB Team <webmaster@web-solutions.eu>
+*/
+
+// body
+body {
+    letter-spacing: .02rem;
+}
+body.dark-mode * {
+    $primary:   #ffffff;
+    $secondary: #000000;
+}
+.custom-logo {
+    height:20px;
+    width:70px;
+}
+.navbar-toggler-icon {
+    background-image: url(C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\assets\img\star.png)!important;
+    /*    width: 2.0em;
+        height: 2.0em;*/
+}
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+    word-break: normal;
+}
+
+.site-content {
+    background-color: $secondary;
+}
+
+// button
+.btn {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}

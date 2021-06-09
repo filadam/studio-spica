@@ -6,6 +6,8 @@ import $ from 'jquery';
 
 // Import bootstrap
 // You can specify which plugins you need
-import { Tooltip, Toast, Popover } from 'bootstrap';
+import { Tooltip, Toast, Popover, Modal } from 'bootstrap';
 
 // Import other script
+
+import './nightmode';
