@@ -3,10 +3,96 @@
     Created on : Jan 19, 2021
     Author     : Studio Spica
 */
-.night-mode {
-    background: url(C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\assets\img\night-mode.svg);
-    height:30px;
-    width:25px;
-    background-repeat: round;
-    border:none;
+.nav-link {
+    color:$secondary;
+    font-family: $font-family-base;
+    font-size: $font-size-l;
+    font-weight:$font-weight-semibold;
+    text-transform: uppercase;
+}
+.header-container {
+    position:absolute;
+    transition: top 600ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+    overflow:hidden;
+    width:100%;
+    top:-100%;
+    background-color:black;
+    z-index:998;
+    &.active {
+        top:0;
+    }
+}
+.header-nav {
+    display:none;
+    background-color:transparent;
+    color:$primary;
+    display:flex;
+    flex-direction: row;
+    color:$secondary;
+}
+.site-logo {
+    padding-right: 12px;
+    padding-left: 12px;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    color:white;
+    background-color:transparent;
+    font-family: $font-family-base;
+    font-size: $font-size-xxl;
+    font-weight:$font-weight-bold;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    mix-blend-mode: difference;
+}
+.nav-link {
+    color:$secondary;
+    transition:200ms;
+    &:hover, &:focus {
+        transition:200ms;
+        color: #5d5d5d!important;
+    }
+}
+.navbar-toggler {
+    padding-right: 12px;
+    padding-left: 12px;
+    height:115px;
+    position:fixed;
+    filter:invert(1);
+    z-index:999;
+    visibility: visible!important;
+    mix-blend-mode: difference;
+    &:focus {
+        box-shadow:none;
+    }
+    .navbar-toggler-icon {
+        background-image: url(C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\assets\img\star.png)!important;
+        height:60px;
+        width:60px;
+        border-radius: 25px;
+        animation-name: in;
+        animation-duration:3s;
+        animation-iteration-count:infinite;
+        animation-timing-function: linear;
+        z-index: 999;
+    }
+}
+
+@keyframes in {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes out {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
 }

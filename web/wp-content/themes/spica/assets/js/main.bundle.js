@@ -3105,6 +3105,26 @@ function within(min, value, max) {
 
 /***/ }),
 
+/***/ "./assets/js/header.js":
+/*!*****************************!*\
+  !*** ./assets/js/header.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+/* provided dependency */ var jQuery = __webpack_require__(/*! ./node_modules/jquery */ "./node_modules/jquery/dist/jquery.js");
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+jQuery(function ($) {
+  $('.navbar-toggler').click(function () {
+    $('.header-container, .navbar-toggler-icon').toggleClass('active');
+  });
+});
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.esm.js":
 /*!*********************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.esm.js ***!
@@ -19064,6 +19084,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
+/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./header */ "./assets/js/header.js");
+/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_header__WEBPACK_IMPORTED_MODULE_3__);
 // Import style
  // Import jQuery
 
@@ -19071,6 +19093,8 @@ __webpack_require__.r(__webpack_exports__);
 // You can specify which plugins you need
 
  // Import other script
+
+
 })();
 
 /******/ })()

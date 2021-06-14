@@ -65,8 +65,8 @@ function setup_theme()
     add_theme_support(
         'custom-logo',
         array(
-            'height' => 90,
-            'width' => 400,
+            'height' => 200,
+            'width' => 700,
             'flex-width' => false,
         )
     );

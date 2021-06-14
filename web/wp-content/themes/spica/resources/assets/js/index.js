@@ -10,4 +10,4 @@ import { Tooltip, Toast, Popover, Modal } from 'bootstrap';
 
 // Import other script
 
-import './nightmode';
+import './header';

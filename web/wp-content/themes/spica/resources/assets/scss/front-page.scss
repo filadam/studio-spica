@@ -1,0 +1,21 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    File name  : front-video.scss
+    Created on : Jun 14, 2021
+    Author     : Web Solutions WEB Team <webmaster@web-solutions.eu>
+*/
+.front-demo {
+    min-height:60vh;
+    & h1 {
+        text-align:justify;
+        font-family: $font-family-secondary;
+        font-weight: $font-weight-lighter;
+    }
+}
+
+.front-video {
+};

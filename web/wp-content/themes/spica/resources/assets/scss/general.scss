@@ -8,19 +8,16 @@
 body {
     letter-spacing: .02rem;
 }
-body.dark-mode * {
-    $primary:   #ffffff;
-    $secondary: #000000;
+
+* {
+    /*transition: all .15s ease;*/
 }
+
 .custom-logo {
-    height:20px;
-    width:70px;
+    /*    height:20px;
+        width:70px;*/
 }
-.navbar-toggler-icon {
-    background-image: url(C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\assets\img\star.png)!important;
-    /*    width: 2.0em;
-        height: 2.0em;*/
-}
+
 .screen-reader-text {
     border: 0;
     clip: rect(1px, 1px, 1px, 1px);
@@ -38,6 +35,7 @@ body.dark-mode * {
 
 .site-content {
     background-color: $secondary;
+    overflow-x:hidden;
 }
 
 // button

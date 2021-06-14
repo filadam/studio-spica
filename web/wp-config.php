@@ -78,9 +78,9 @@ if ('production' == WP_ENV) {
  * Custom Settings
  */
 // Disable All Updates
-define('AUTOMATIC_UPDATER_DISABLED', true);
+define('AUTOMATIC_UPDATER_DISABLED', false);
 // Disable the plugin and theme file editor in the admin
-define('DISALLOW_FILE_EDIT', true);
+define('DISALLOW_FILE_EDIT', false);
 // Enable dark mode for Query Monitor's interface.
 define('QM_DARK_MODE', true);
 

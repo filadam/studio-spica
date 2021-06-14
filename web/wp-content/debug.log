@@ -1976,3 +1976,41 @@
 [08-Jun-2021 14:22:33 UTC] PHP   4. require_once() C:\wamp64\www\studiospica.local\web\wp-load.php:37
 [08-Jun-2021 14:22:33 UTC] PHP   5. require_once() C:\wamp64\www\studiospica.local\web\wp-config.php:94
 [08-Jun-2021 14:22:33 UTC] PHP   6. include() C:\wamp64\www\studiospica.local\web\wp-settings.php:528
+[09-Jun-2021 08:12:03 UTC] PHP Fatal error:  Uncaught Error: Xdebug has detected a possible infinite loop, and aborted your script with a stack depth of '256' frames in C:\wamp64\www\studiospica.local\web\wp-includes\class-wp-object-cache.php:493
+Stack trace:
+#0 C:\wamp64\www\studiospica.local\web\wp-includes\class-wp-object-cache.php(290): WP_Object_Cache->_exists('alloptions', 'options')
+#1 C:\wamp64\www\studiospica.local\web\wp-includes\cache.php(125): WP_Object_Cache->get('alloptions', 'options', false, NULL)
+#2 C:\wamp64\www\studiospica.local\web\wp-includes\option.php(231): wp_cache_get('alloptions', 'options', false)
+#3 C:\wamp64\www\studiospica.local\web\wp-includes\option.php(117): wp_load_alloptions()
+#4 C:\wamp64\www\studiospica.local\web\wp-includes\theme.php(181): get_option('stylesheet')
+#5 C:\wamp64\www\studiospica.local\web\wp-includes\theme.php(216): get_stylesheet()
+#6 C:\wamp64\www\studiospica.local\web\wp-includes\theme.php(243): get_stylesheet_directory_uri()
+#7 C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\inc\core\sc in C:\wamp64\www\studiospica.local\web\wp-includes\class-wp-object-cache.php on line 493
+[09-Jun-2021 08:48:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_products() in C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\template-parts\front-page\products.php:2
+Stack trace:
+#0 C:\wamp64\www\studiospica.local\web\wp-includes\template.php(732): require()
+#1 C:\wamp64\www\studiospica.local\web\wp-includes\template.php(676): load_template('C:\\wamp64\\www\\s...', false, Array)
+#2 C:\wamp64\www\studiospica.local\web\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\front-page.php(17): get_template_part('template-parts/...')
+#4 C:\wamp64\www\studiospica.local\web\wp-includes\template-loader.php(106): include('C:\\wamp64\\www\\s...')
+#5 C:\wamp64\www\studiospica.local\web\wp-blog-header.php(19): require_once('C:\\wamp64\\www\\s...')
+#6 C:\wamp64\www\studiospica.local\web\index.php(17): require('C:\\wamp64\\www\\s...')
+#7 {main}
+  thrown in C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\template-parts\front-page\products.php on line 2
+[10-Jun-2021 06:46:44 UTC] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF), expecting end of file in C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\template-parts\footer\footer-layout.php on line 24
+[10-Jun-2021 06:46:45 UTC] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF), expecting end of file in C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\template-parts\footer\footer-layout.php on line 24
+[10-Jun-2021 06:46:45 UTC] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF), expecting end of file in C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\template-parts\footer\footer-layout.php on line 24
+[10-Jun-2021 06:46:46 UTC] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF), expecting end of file in C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\template-parts\footer\footer-layout.php on line 24
+[10-Jun-2021 06:46:46 UTC] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF), expecting end of file in C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\template-parts\footer\footer-layout.php on line 24
+[10-Jun-2021 09:11:39 UTC] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF), expecting end of file in C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\template-parts\footer\footer-layout.php on line 26
+[10-Jun-2021 09:11:40 UTC] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF), expecting end of file in C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\template-parts\footer\footer-layout.php on line 26
+[14-Jun-2021 08:01:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function __e() in C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\template-parts\footer\footer-layout.php:14
+Stack trace:
+#0 C:\wamp64\www\studiospica.local\web\wp-includes\template.php(732): require()
+#1 C:\wamp64\www\studiospica.local\web\wp-includes\template.php(676): load_template('C:\\wamp64\\www\\s...', false, Array)
+#2 C:\wamp64\www\studiospica.local\web\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\footer.php(17): get_template_part('template-parts/...', 'layout')
+#4 C:\wamp64\www\studiospica.local\web\wp-includes\template.php(730): require_once('C:\\wamp64\\www\\s...')
+#5 C:\wamp64\www\studiospica.local\web\wp-includes\template.php(676): load_template('C:\\wamp64\\www\\s...', true, Array)
+#6 C:\wamp64\www\studiospica.local\web\wp-includes\general-template.php(92): locate_template(Array, true, true, Array)
+#7 C:\wamp64\www\studiospica.local\web\wp-content\them in C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\template-parts\footer\footer-layout.php on line 14
