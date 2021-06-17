@@ -11,8 +11,8 @@
         <h1>Jesteśmy zespołem interdyscyplinarnych twórców i myślicieli, zaangażowanych w tworzenie stron internetowych, indentyfikacji wizualnej i materiałów marketingowych.</h1>
     </div>
 </div>-->
-<div class="row m-0 p-0 g-0">
+<!--<div class="row m-0 p-0 g-0">
     <video class=' front-video' playsinline="playsinline" autoplay="" muted="" loop>
         <source src="http://studiospica.local/wp-content/uploads/2021/06/stars.mp4" type="video/mp4">
     </video>
-</div>
+</div>-->

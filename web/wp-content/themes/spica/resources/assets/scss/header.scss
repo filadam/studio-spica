@@ -11,62 +11,57 @@
     text-transform: uppercase;
 }
 .header-container {
+    visibility:hidden;
     position:absolute;
     transition: top 600ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
     overflow:hidden;
     width:100%;
     top:-100%;
     background-color:black;
-    z-index:998;
+    transition:700ms;
+    .site-logo {
+        display: flex;
+        color:$primary;
+        background-color:transparent;
+        font-family: $font-family-base;
+        font-size: $font-size-l;
+        font-weight:$font-weight-bold;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        transition-delay: 0.5s;
+        transition-duration: 600ms;
+    }
+    .header-nav {
+        & li a {
+            color:$primary;
+            transition-delay: 1s;
+            transition-duration: 600ms;
+        }
+    }
     &.active {
         top:0;
+        visibility:visible;  
+        .site-logo {
+            color:$secondary;
+            transition-delay: 0.5s;
+            transition-duration: 600ms;
+        }
+        .header-nav {
+            visibility: visible;
+            & li a {
+                color:$secondary;
+                transition-delay: 1s;
+                transition-duration: 600ms;
+            }
+        }
     }
 }
-.header-nav {
-    display:none;
-    background-color:transparent;
-    color:$primary;
-    display:flex;
-    flex-direction: row;
-    color:$secondary;
-}
-.site-logo {
-    padding-right: 12px;
-    padding-left: 12px;
-    position: fixed;
-    z-index: 999;
-    display: flex;
-    color:white;
-    background-color:transparent;
-    font-family: $font-family-base;
-    font-size: $font-size-xxl;
-    font-weight:$font-weight-bold;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    mix-blend-mode: difference;
-}
-.nav-link {
-    color:$secondary;
-    transition:200ms;
-    &:hover, &:focus {
-        transition:200ms;
-        color: #5d5d5d!important;
-    }
-}
+
+
 .navbar-toggler {
-    padding-right: 12px;
-    padding-left: 12px;
-    height:115px;
-    position:fixed;
-    filter:invert(1);
-    z-index:999;
     visibility: visible!important;
-    mix-blend-mode: difference;
-    &:focus {
-        box-shadow:none;
-    }
     .navbar-toggler-icon {
         background-image: url(C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\assets\img\star.png)!important;
         height:60px;
@@ -76,7 +71,12 @@
         animation-duration:3s;
         animation-iteration-count:infinite;
         animation-timing-function: linear;
-        z-index: 999;
+        mix-blend-mode: difference;
+        position: sticky;
+        z-index: 99999999;
+        &.active {
+            filter:invert(1);
+        }
     }
 }
 

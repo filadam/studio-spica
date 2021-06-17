@@ -2,7 +2,7 @@
 $show_title = ( true === get_theme_mod('display_title_and_tagline', true) );
 
 ?>
-<div class="col d-flex justify-content-end">
+<div class="col d-flex justify-content-center mt-5">
     <?php if (has_nav_menu('primary')) : ?>
         <button 
             class="navbar-toggler" 
@@ -12,13 +12,17 @@ $show_title = ( true === get_theme_mod('display_title_and_tagline', true) );
     </button>
 <?php endif; ?>
 </div> 
-
-<div class="col d-flex justify-content-start">
-    <div class="site-logo">SPICA</div>
-</div>
-
 <div class="container-fluid header-container m-0 position-fixed py-5">
-    <div class="row align-items-end">
+    <div class="row  align-items-start px-2">
+
+
+    </div>
+    <div class="row align-items-end pt-3">
+        <div class="col d-flex justify-content-center pt-4">
+            <div class="site-logo pt-3">SPICA</div>
+        </div>
+    </div> 
+    <div class="row align-items-end pt-5">
         <div class="col d-flex justify-content-center align-items-end">
             <nav 
                 id="site-navigation" 
