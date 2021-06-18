@@ -1,0 +1,70 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    File name  : svgstyles.scss
+    Created on : Jun 18, 2021
+    Author     : Web Solutions WEB Team <webmaster@web-solutions.eu>
+*/
+
+
+/*$colors: #ffffff, #e3efff, #efe3ff, #e3fff5, #ffe3ed;*/
+$colorsWhite: #ffffff, #e6d6ff, #d9d6ff, #d6e7ff, #d6fbff;
+$colors: #000000, #e6d6ff, #d9d6ff, #d6e7ff, #d6fbff;
+$max: length($colors);
+$max2: length($colorsWhite);
+$dash: 70;
+$dash-gap: 0;
+$dash-space: $dash * ($max - 1) + $dash-gap * $max;
+$time: 6s;
+$time-step: $time/$max;
+.text {
+    @extend .text-2;
+    @for $item from 1 through $max2 {
+        &:nth-child(#{$max2}n + #{$item}) {
+            $color: nth($colorsWhite, $item);
+            stroke: $color!important;
+            -webkit-animation-delay: -($time-step * $item);
+            animation-delay: -($time-step * $item);
+        }
+    }
+}
+.text-2, .text-3, .text-4, .text-5 {
+    font: 5em/1 $font-family-base;
+    text-transform: uppercase;
+    fill: none;
+    stroke-width: 3;
+    stroke-linejoin: round;
+    stroke-dasharray: $dash $dash-space;
+    stroke-dashoffset: 0;
+    -webkit-animation: stroke $time infinite linear;
+    animation: stroke $time infinite linear;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    @for $item from 1 through $max {
+        &:nth-child(#{$max}n + #{$item}) {
+            $color: nth($colors, $item);
+            stroke: $color;
+            -webkit-animation-delay: -($time-step * $item);
+            animation-delay: -($time-step * $item);
+        }
+    }
+}
+
+@-webkit-keyframes stroke {
+    100% {
+        stroke-dashoffset: -($dash + $dash-gap) * $max;
+    }
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: -($dash + $dash-gap) * $max;
+    }
+}
+

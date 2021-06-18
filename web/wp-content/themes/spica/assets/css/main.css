@@ -16300,16 +16300,17 @@ body {
 .header-container {
   visibility: hidden;
   position: absolute;
-  transition: top 600ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+  transition: top cubic-bezier(0.17, 0.04, 0.03, 0.94);
   overflow: hidden;
   width: 100%;
   top: -100%;
   background-color: black;
-  transition: 700ms;
+  transition: 600ms;
+  z-index: 998;
 }
 .header-container .site-logo {
   display: flex;
-  color: #000000;
+  /*color:$primary;*/
   background-color: transparent;
   font-family: "Titillium Web", sans-serif;
   font-size: 2.125rem;
@@ -16318,8 +16319,11 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  transition-delay: 0.5s;
-  transition-duration: 600ms;
+  /*background: -webkit-linear-gradient(#eee, #333);*/
+  /*-webkit-background-clip: text;*/
+  /*-webkit-text-fill-color: transparent;*/
+  /*transition-delay: 1s;*/
+  /*transition-duration: 600ms;*/
 }
 .header-container .header-nav li a {
   color: #000000;
@@ -16332,8 +16336,8 @@ body {
 }
 .header-container.active .site-logo {
   color: #ffffff;
-  transition-delay: 0.5s;
-  transition-duration: 600ms;
+  /*transition-delay: 1s;*/
+  /*transition-duration: 600ms;*/
 }
 .header-container.active .header-nav {
   visibility: visible;
@@ -16343,9 +16347,27 @@ body {
   transition-delay: 1s;
   transition-duration: 600ms;
 }
+.header-container.active .header-nav li a:hover {
+  transition: 200ms;
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: white;
+  color: transparent;
+}
+.header-container.active .header-nav li a:not(:hover) {
+  transition: 200ms;
+}
+
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: unset;
+}
 
 .navbar-toggler {
   visibility: visible !important;
+  height: 60px;
+  width: 60px;
+  z-index: 999;
 }
 .navbar-toggler .navbar-toggler-icon {
   background-image: url(/wp-content/themes/spica/assets/img/star.png) !important;
@@ -16357,8 +16379,7 @@ body {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   mix-blend-mode: difference;
-  position: sticky;
-  z-index: 99999999;
+  position: fixed;
 }
 .navbar-toggler .navbar-toggler-icon.active {
   filter: invert(1);
@@ -16391,12 +16412,127 @@ and open the template in the editor.
     Author     : Web Solutions WEB Team <webmaster@web-solutions.eu>
 */
 .front-demo {
-  min-height: 60vh;
+  /*margin-top:50vh;*/
 }
 .front-demo h1, .front-demo .h1 {
+  font-weight: 700;
+  font-size: 3.125rem;
+  text-transform: uppercase;
   text-align: justify;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 200;
+  font-family: "Titillium Web", sans-serif;
+  /*font-weight: $font-weight-lighter;*/
+}
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    File name  : svgstyles.scss
+    Created on : Jun 18, 2021
+    Author     : Web Solutions WEB Team <webmaster@web-solutions.eu>
+*/
+/*$colors: #ffffff, #e3efff, #efe3ff, #e3fff5, #ffe3ed;*/
+.text:nth-child(5n+1) {
+  stroke: #ffffff !important;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.text:nth-child(5n+2) {
+  stroke: #e6d6ff !important;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+.text:nth-child(5n+3) {
+  stroke: #d9d6ff !important;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+.text:nth-child(5n+4) {
+  stroke: #d6e7ff !important;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+.text:nth-child(5n+5) {
+  stroke: #d6fbff !important;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+.text-2, .text, .text-3, .text-4, .text-5 {
+  font: 5em/1 "Titillium Web", sans-serif;
+  text-transform: uppercase;
+  fill: none;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 280;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 6s infinite linear;
+  animation: stroke 6s infinite linear;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.text-2:nth-child(5n+1), .text:nth-child(5n+1), .text-3:nth-child(5n+1), .text-4:nth-child(5n+1), .text-5:nth-child(5n+1) {
+  stroke: #000000;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.text-2:nth-child(5n+2), .text:nth-child(5n+2), .text-3:nth-child(5n+2), .text-4:nth-child(5n+2), .text-5:nth-child(5n+2) {
+  stroke: #e6d6ff;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+.text-2:nth-child(5n+3), .text:nth-child(5n+3), .text-3:nth-child(5n+3), .text-4:nth-child(5n+3), .text-5:nth-child(5n+3) {
+  stroke: #d9d6ff;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+.text-2:nth-child(5n+4), .text:nth-child(5n+4), .text-3:nth-child(5n+4), .text-4:nth-child(5n+4), .text-5:nth-child(5n+4) {
+  stroke: #d6e7ff;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+.text-2:nth-child(5n+5), .text:nth-child(5n+5), .text-3:nth-child(5n+5), .text-4:nth-child(5n+5), .text-5:nth-child(5n+5) {
+  stroke: #d6fbff;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -350;
+  }
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -350;
+  }
+}
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    File name  : front-projects.scss
+    Created on : Jun 18, 2021
+    Author     : Web Solutions WEB Team <webmaster@web-solutions.eu>
+*/
+.img-title {
+  pointer-events: none;
+  position: absolute;
+  z-index: 999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+img {
+  cursor: none;
 }
 
 /*# sourceMappingURL=main.css.map*/

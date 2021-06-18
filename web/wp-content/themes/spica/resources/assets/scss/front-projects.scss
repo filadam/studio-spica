@@ -1,0 +1,23 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    File name  : front-projects.scss
+    Created on : Jun 18, 2021
+    Author     : Web Solutions WEB Team <webmaster@web-solutions.eu>
+*/
+.img-title {
+    pointer-events: none;
+    position:absolute;
+    z-index:999;    
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+img {
+    cursor: none;
+}

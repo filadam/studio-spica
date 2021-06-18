@@ -2,10 +2,10 @@
 $show_title = ( true === get_theme_mod('display_title_and_tagline', true) );
 
 ?>
-<div class="col d-flex justify-content-center mt-5">
+<div class="col mt-5 d-flex justify-content-center">
     <?php if (has_nav_menu('primary')) : ?>
         <button 
-            class="navbar-toggler" 
+            class="navbar-toggler d-flex justify-content-center" 
             type="button" 
             />
         <span class="navbar-toggler-icon"></span>
@@ -19,10 +19,19 @@ $show_title = ( true === get_theme_mod('display_title_and_tagline', true) );
     </div>
     <div class="row align-items-end pt-3">
         <div class="col d-flex justify-content-center pt-4">
-            <div class="site-logo pt-3">SPICA</div>
+            <svg viewBox="0 0 2000 150">
+            <symbol id="s-text">
+                <text text-anchor="middle" x="50%" y="50%" dy=".35em">SPICA</text>
+            </symbol>
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+            </svg>
         </div>
     </div> 
-    <div class="row align-items-end pt-5">
+    <div class="row align-items-end pt-xl-5">
         <div class="col d-flex justify-content-center align-items-end">
             <nav 
                 id="site-navigation" 

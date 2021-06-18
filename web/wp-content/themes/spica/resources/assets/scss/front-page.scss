@@ -9,11 +9,14 @@ and open the template in the editor.
     Author     : Web Solutions WEB Team <webmaster@web-solutions.eu>
 */
 .front-demo {
-    min-height:60vh;
+    /*margin-top:50vh;*/
     & h1 {
+        font-weight: $font-weight-bold;
+        font-size: $font-size-xl;
+        text-transform: uppercase;
         text-align:justify;
-        font-family: $font-family-secondary;
-        font-weight: $font-weight-lighter;
+        font-family: $font-family-base;
+        /*font-weight: $font-weight-lighter;*/
     }
 }
 
