@@ -7,6 +7,7 @@
 // Theme default colors
 $primary:   #000000 !default;
 $secondary: #ffffff !default;
+$tertiary: #e6d6ff !default;
 
 $color-black: rgb(0,0,0);
 $color-white: rgb(255,255,255);
@@ -26,6 +27,11 @@ $color-white: rgb(255,255,255);
 // Font defaults
 $font-family-base:  'Titillium Web', sans-serif;
 $font-family-secondary:  'Open Sans', sans-serif;
+$font-family-bungee-regular: 'Bungee', cursive;
+$font-family-bungee-hairline: 'Bungee Hairline', cursive;
+$font-family-bungee-inline: 'Bungee Inline', cursive;
+$font-family-bungee-outline: 'Bungee Outline', cursive;
+$font-family-bungee-shade: 'Bungee Shade', cursive;
 $font-size-base:    1rem !default;
 
 $font-size-sm:      0.875rem !default;

@@ -16289,12 +16289,53 @@ body {
     Created on : Jan 19, 2021
     Author     : Studio Spica
 */
+.site-logo {
+  background-color: transparent;
+  font-family: "Bungee", cursive;
+  font-size: 3.125rem;
+  font-weight: 700;
+  position: fixed;
+  z-index: 999;
+  mix-blend-mode: difference;
+  color: #e6d6ff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  stroke: 3px red;
+  /*-webkit-text-stroke: 3px red;*/
+}
+
+.navbar-toggler {
+  visibility: visible !important;
+  height: 60px;
+  width: 60px;
+  z-index: 999;
+  mix-blend-mode: difference;
+  fill: #e6d6ff;
+}
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: unset;
+}
+.navbar-toggler .navbar-toggler-icon {
+  height: 60px;
+  width: 60px;
+  animation-name: in;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  position: fixed;
+}
 .nav-link {
-  color: #ffffff;
-  font-family: "Titillium Web", sans-serif;
-  font-size: 2.125rem;
-  font-weight: 600;
+  color: #e6d6ff;
+  font-family: "Bungee Hairline", cursive;
+  font-size: 3.125rem;
+  font-weight: 700;
   text-transform: uppercase;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .header-container {
@@ -16304,40 +16345,29 @@ body {
   overflow: hidden;
   width: 100%;
   top: -100%;
-  background-color: black;
+  background-color: #000000;
   transition: 600ms;
   z-index: 998;
 }
-.header-container .site-logo {
-  display: flex;
-  /*color:$primary;*/
-  background-color: transparent;
-  font-family: "Titillium Web", sans-serif;
-  font-size: 2.125rem;
-  font-weight: 700;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  /*background: -webkit-linear-gradient(#eee, #333);*/
-  /*-webkit-background-clip: text;*/
-  /*-webkit-text-fill-color: transparent;*/
-  /*transition-delay: 1s;*/
-  /*transition-duration: 600ms;*/
-}
-.header-container .header-nav li a {
-  color: #000000;
-  transition-delay: 1s;
-  transition-duration: 600ms;
+@media (max-width: 768px) {
+  .header-container {
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    height: 100%;
+  }
+  .header-container .nav {
+    padding-left: 0px !important;
+    padding-right: 0px;
+  }
+  .header-container .nav .nav-link {
+    padding-left: 0px;
+    margin-right: 1rem;
+  }
 }
 .header-container.active {
   top: 0;
   visibility: visible;
-}
-.header-container.active .site-logo {
-  color: #ffffff;
-  /*transition-delay: 1s;*/
-  /*transition-duration: 600ms;*/
 }
 .header-container.active .header-nav {
   visibility: visible;
@@ -16349,40 +16379,11 @@ body {
 }
 .header-container.active .header-nav li a:hover {
   transition: 200ms;
-  -webkit-text-stroke-width: 0.2px;
-  -webkit-text-stroke-color: white;
-  color: transparent;
+  color: #e6d6ff;
+  font-family: "Bungee Outline", cursive;
 }
 .header-container.active .header-nav li a:not(:hover) {
   transition: 200ms;
-}
-
-.navbar-toggler:focus {
-  text-decoration: none;
-  outline: 0;
-  box-shadow: unset;
-}
-
-.navbar-toggler {
-  visibility: visible !important;
-  height: 60px;
-  width: 60px;
-  z-index: 999;
-}
-.navbar-toggler .navbar-toggler-icon {
-  background-image: url(/wp-content/themes/spica/assets/img/star.png) !important;
-  height: 60px;
-  width: 60px;
-  border-radius: 25px;
-  animation-name: in;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  mix-blend-mode: difference;
-  position: fixed;
-}
-.navbar-toggler .navbar-toggler-icon.active {
-  filter: invert(1);
 }
 
 @keyframes in {
@@ -16423,6 +16424,29 @@ and open the template in the editor.
   /*font-weight: $font-weight-lighter;*/
 }
 
+.video {
+  position: relative;
+  background-color: #000;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.front-video {
+  filter: grayscale(1);
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -16460,8 +16484,8 @@ and open the template in the editor.
   animation-delay: -6s;
 }
 
-.text-2, .text, .text-3, .text-4, .text-5 {
-  font: 5em/1 "Titillium Web", sans-serif;
+.text-2, .text, .text-3, .text-4, .text-5, .text-snugly {
+  font: 5em/1 "Bungee", cursive;
   text-transform: uppercase;
   fill: none;
   stroke-width: 3;
@@ -16475,27 +16499,27 @@ and open the template in the editor.
   -ms-user-select: none;
   user-select: none;
 }
-.text-2:nth-child(5n+1), .text:nth-child(5n+1), .text-3:nth-child(5n+1), .text-4:nth-child(5n+1), .text-5:nth-child(5n+1) {
-  stroke: #000000;
+.text-2:nth-child(5n+1), .text:nth-child(5n+1), .text-3:nth-child(5n+1), .text-4:nth-child(5n+1), .text-5:nth-child(5n+1), .text-snugly:nth-child(5n+1) {
+  stroke: #ffffff;
   -webkit-animation-delay: -1.2s;
   animation-delay: -1.2s;
 }
-.text-2:nth-child(5n+2), .text:nth-child(5n+2), .text-3:nth-child(5n+2), .text-4:nth-child(5n+2), .text-5:nth-child(5n+2) {
+.text-2:nth-child(5n+2), .text:nth-child(5n+2), .text-3:nth-child(5n+2), .text-4:nth-child(5n+2), .text-5:nth-child(5n+2), .text-snugly:nth-child(5n+2) {
   stroke: #e6d6ff;
   -webkit-animation-delay: -2.4s;
   animation-delay: -2.4s;
 }
-.text-2:nth-child(5n+3), .text:nth-child(5n+3), .text-3:nth-child(5n+3), .text-4:nth-child(5n+3), .text-5:nth-child(5n+3) {
+.text-2:nth-child(5n+3), .text:nth-child(5n+3), .text-3:nth-child(5n+3), .text-4:nth-child(5n+3), .text-5:nth-child(5n+3), .text-snugly:nth-child(5n+3) {
   stroke: #d9d6ff;
   -webkit-animation-delay: -3.6s;
   animation-delay: -3.6s;
 }
-.text-2:nth-child(5n+4), .text:nth-child(5n+4), .text-3:nth-child(5n+4), .text-4:nth-child(5n+4), .text-5:nth-child(5n+4) {
+.text-2:nth-child(5n+4), .text:nth-child(5n+4), .text-3:nth-child(5n+4), .text-4:nth-child(5n+4), .text-5:nth-child(5n+4), .text-snugly:nth-child(5n+4) {
   stroke: #d6e7ff;
   -webkit-animation-delay: -4.8s;
   animation-delay: -4.8s;
 }
-.text-2:nth-child(5n+5), .text:nth-child(5n+5), .text-3:nth-child(5n+5), .text-4:nth-child(5n+5), .text-5:nth-child(5n+5) {
+.text-2:nth-child(5n+5), .text:nth-child(5n+5), .text-3:nth-child(5n+5), .text-4:nth-child(5n+5), .text-5:nth-child(5n+5), .text-snugly:nth-child(5n+5) {
   stroke: #d6fbff;
   -webkit-animation-delay: -6s;
   animation-delay: -6s;
@@ -16521,7 +16545,30 @@ and open the template in the editor.
     Created on : Jun 18, 2021
     Author     : Web Solutions WEB Team <webmaster@web-solutions.eu>
 */
+.img-container {
+  overflow: hidden;
+  background-color: #ffffff;
+  background-position: top;
+  background-size: cover;
+  background-image: url("http://studiospica.local/wp-content/uploads/2021/06/scrnli_21-06-2021_12-48-44-1-scaled.jpg");
+  position: relative;
+  /*padding-bottom:100%;*/
+  /*filter: grayscale(1);*/
+  cursor: none;
+  height: 600px;
+}
+.img-container:hover {
+  /*background-image:url('http://studiospica.local/wp-content/uploads/2021/06/scrnli_21-06-2021_12-48-44-2-scaled.jpg');*/
+  transition: 700ms;
+  background-position: bottom;
+}
+.img-container:not(:hover) {
+  transition: 700ms;
+}
+
 .img-title {
+  font-family: "Bungee", cursive;
+  visibility: hidden;
   pointer-events: none;
   position: absolute;
   z-index: 999;
@@ -16529,10 +16576,36 @@ and open the template in the editor.
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  font-size: 3.125rem;
+  font-weight: 700;
+  mix-blend-mode: difference;
+  color: #e6d6ff;
+  margin-top: -45px;
+  margin-left: -110px;
 }
 
 img {
   cursor: none;
+}
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    File name  : footer.scss
+    Created on : Jun 21, 2021
+    Author     : Web Solutions WEB Team <webmaster@web-solutions.eu>
+*/
+.footer-container {
+  /*  position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: $primary;
+    color: white;
+    text-align: center;*/
 }
 
 /*# sourceMappingURL=main.css.map*/

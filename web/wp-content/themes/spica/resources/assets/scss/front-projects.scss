@@ -8,7 +8,29 @@ and open the template in the editor.
     Created on : Jun 18, 2021
     Author     : Web Solutions WEB Team <webmaster@web-solutions.eu>
 */
+.img-container {
+    overflow: hidden;
+    background-color: $secondary;
+    background-position: top;
+    background-size: cover;
+    background-image:url('http://studiospica.local/wp-content/uploads/2021/06/scrnli_21-06-2021_12-48-44-1-scaled.jpg'); 
+    position:relative; 
+    /*padding-bottom:100%;*/
+    /*filter: grayscale(1);*/
+    cursor:none;
+    height:600px;
+    &:hover {
+        /*background-image:url('http://studiospica.local/wp-content/uploads/2021/06/scrnli_21-06-2021_12-48-44-2-scaled.jpg');*/
+        transition:700ms;
+        background-position: bottom;
+    }
+    &:not(:hover) {
+        transition:700ms;
+    }
+}
 .img-title {
+    font-family:$font-family-bungee-regular;
+    visibility:hidden;
     pointer-events: none;
     position:absolute;
     z-index:999;    
@@ -16,7 +38,12 @@ and open the template in the editor.
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-
+    font-size: $font-size-xl;
+    font-weight: 700;
+    mix-blend-mode: difference;
+    color: #e6d6ff;
+    margin-top: -45px;
+    margin-left: -110px;
 }
 img {
     cursor: none;

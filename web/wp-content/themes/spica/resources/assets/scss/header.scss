@@ -3,12 +3,55 @@
     Created on : Jan 19, 2021
     Author     : Studio Spica
 */
+.site-logo {
+    background-color:transparent;
+    font-family: $font-family-bungee-regular;
+    font-size: $font-size-xl;
+    font-weight:$font-weight-bold;
+    position: fixed;
+    z-index:999;
+    mix-blend-mode: difference;
+    color: $tertiary;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    stroke: 3px red;
+    /*-webkit-text-stroke: 3px red;*/
+}
+
+.navbar-toggler {
+    visibility: visible!important;
+    height:60px;
+    width:60px;
+    z-index: 999;
+    mix-blend-mode: difference;
+    fill:$tertiary;
+    &:focus {
+        text-decoration: none;
+        outline: 0;
+        box-shadow: unset;
+    }
+    .navbar-toggler-icon {
+        height:60px;
+        width:60px;
+        animation-name: in;
+        animation-duration:3s;
+        animation-iteration-count:infinite;
+        animation-timing-function: linear;
+        position: fixed;
+        &.active {
+        }
+    }
+}
 .nav-link {
-    color:$secondary;
-    font-family: $font-family-base;
-    font-size: $font-size-l;
-    font-weight:$font-weight-semibold;
+    color:$tertiary;
+    font-family: $font-family-bungee-hairline;
+    font-size: $font-size-xl;
+    font-weight: 700;
     text-transform: uppercase;
+    padding-top:0px;
+    padding-bottom:0px;
 }
 .header-container {
     visibility:hidden;
@@ -17,41 +60,26 @@
     overflow:hidden;
     width:100%;
     top:-100%;
-    background-color:black;
+    background-color:$primary;
     transition:600ms;
     z-index:998;
-    .site-logo {
-        display: flex;
-        /*color:$primary;*/
-        background-color:transparent;
-        font-family: $font-family-base;
-        font-size: $font-size-l;
-        font-weight:$font-weight-bold;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        /*background: -webkit-linear-gradient(#eee, #333);*/
-        /*-webkit-background-clip: text;*/
-        /*-webkit-text-fill-color: transparent;*/
-        /*transition-delay: 1s;*/
-        /*transition-duration: 600ms;*/
-    }
-    .header-nav {
-        & li a {
-            color:$primary;
-            transition-delay: 1s;
-            transition-duration: 600ms;
+    @media (max-width:768px) {
+        display:flex;
+        justify-content:start;
+        align-items:flex-end;
+        height:100%;
+        .nav {
+            padding-left:0px!important;
+            padding-right:0px;
+            .nav-link {
+                padding-left: 0px;
+                margin-right: 1rem;
+            }
         }
     }
     &.active {
         top:0;
         visibility:visible;  
-        .site-logo {
-            color:$secondary;
-            /*transition-delay: 1s;*/
-            /*transition-duration: 600ms;*/
-        }
         .header-nav {
             visibility: visible;
             & li a {
@@ -60,41 +88,13 @@
                 transition-duration: 600ms;
                 &:hover {
                     transition:200ms;
-                    -webkit-text-stroke-width: 0.2px;
-                    -webkit-text-stroke-color: white;
-                    color: transparent;
+                    color: $tertiary;
+                    font-family: $font-family-bungee-outline;
                 }
                 &:not(:hover) {
                     transition:200ms;
                 }
             }
-        }
-    }
-}
-.navbar-toggler:focus {
-    text-decoration: none;
-    outline: 0;
-    box-shadow: unset;
-}
-
-.navbar-toggler {
-    visibility: visible!important;
-    height:60px;
-    width:60px;
-    z-index: 999;
-    .navbar-toggler-icon {
-        background-image: url(C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\assets\img\star.png)!important;
-        height:60px;
-        width:60px;
-        border-radius: 25px;
-        animation-name: in;
-        animation-duration:3s;
-        animation-iteration-count:infinite;
-        animation-timing-function: linear;
-        mix-blend-mode: difference;
-        position: fixed;
-        &.active {
-            filter:invert(1);
         }
     }
 }

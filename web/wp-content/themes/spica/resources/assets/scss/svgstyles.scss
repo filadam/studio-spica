@@ -12,7 +12,7 @@ and open the template in the editor.
 
 /*$colors: #ffffff, #e3efff, #efe3ff, #e3fff5, #ffe3ed;*/
 $colorsWhite: #ffffff, #e6d6ff, #d9d6ff, #d6e7ff, #d6fbff;
-$colors: #000000, #e6d6ff, #d9d6ff, #d6e7ff, #d6fbff;
+$colors: #ffffff, #e6d6ff, #d9d6ff, #d6e7ff, #d6fbff;
 $max: length($colors);
 $max2: length($colorsWhite);
 $dash: 70;
@@ -31,8 +31,9 @@ $time-step: $time/$max;
         }
     }
 }
-.text-2, .text-3, .text-4, .text-5 {
-    font: 5em/1 $font-family-base;
+
+.text-2, .text-3, .text-4, .text-5, .text-snugly {
+    font: 5em/1 $font-family-bungee-regular;
     text-transform: uppercase;
     fill: none;
     stroke-width: 3;

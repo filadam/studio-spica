@@ -156,3 +156,12 @@ function change_comment_form($defaults)
     return $defaults;
 }
 add_filter('comment_form_defaults', 'change_comment_form');
+
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'secondary-menu' => __( 'Secondary Menu' ),
+    )
+  );
+}
+add_action( 'init', 'register_my_menus' );

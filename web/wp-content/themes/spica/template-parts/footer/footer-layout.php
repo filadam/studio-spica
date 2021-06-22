@@ -1,8 +1,5 @@
 
-<div class="footer-container container-fluid pt-5">
-    <div class="row pt-5">
-
-    </div>
+<div class="footer-container container-fluid py-1">
     <div class="row align-items-center">
         <div class="col d-flex justify-content-center">
             <svg viewBox="0 0 3000 200">

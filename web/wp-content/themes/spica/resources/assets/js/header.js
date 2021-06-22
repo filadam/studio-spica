@@ -10,25 +10,15 @@ jQuery(function ($) {
     });
 });
 
-//jQuert(function ($) {
-//    var colors = ['red', 'green', 'blue', 'orange']
-//    $('.site-logo').css('color', function () {
-//        return colors[Math.floor(Math.random() * colors.lenght)];
-//    });
-//
-//})
-
-//var colors = ['to right top, #051937, #A8EB12'];
-//var logo = document.querySelector('.site-logo');
-//
-//
-//logo.style.background = "-webkit-linear-gradient(" + colors[Math.floor(Math.random() * colors.length)] + ")";
-//$('.site-logo').css("-webkit-background-clip", "text");
-//$('.site-logo').css("-webkit-text-fill-color", "transparent");
-
-let circle = document.querySelector('.img-title');
+let title = document.querySelector('.img-title');
 const onMouseMove = (e) => {
-    circle.style.left = e.pageX + 'px';
-    circle.style.top = e.pageY + 'px';
+    let img = e.target.getBoundingClientRect();
+    if (e.target.classList.contains('img-container')) {
+        title.style.left = e.clientX - img.left + 'px';
+        title.style.top = e.clientY - img.top + 'px';
+        title.style.visibility = "visible";
+    } else if (!e.target.classList.contains('img-container')) {
+        title.style.visibility = "hidden";
+    }
 }
 document.addEventListener('mousemove', onMouseMove);
