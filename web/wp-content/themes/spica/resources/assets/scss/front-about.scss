@@ -1,0 +1,27 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    File name  : front-about.scss
+    Created on : Jun 23, 2021
+    Author     : Web Solutions WEB Team <webmaster@web-solutions.eu>
+*/
+
+.about-us-container {
+    background-color:black;
+    height:75vh;
+    * {
+        color:$secondary;
+        font-family: $font-family-bungee-hairline;
+    }
+}
+.about-us-container-pt {
+    background-color:$tertiary;
+    margin-left: -3 * $spacer;
+    height:35vh;
+    @media (max-width: 768px ) {
+        margin-left: 0px;
+    }
+}

@@ -3112,17 +3112,21 @@ function within(min, value, max) {
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 /* provided dependency */ var jQuery = __webpack_require__(/*! ./node_modules/jquery */ "./node_modules/jquery/dist/jquery.js");
+/* provided dependency */ var $ = __webpack_require__(/*! ./node_modules/jquery */ "./node_modules/jquery/dist/jquery.js");
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+// add class active
 jQuery(function ($) {
   $('.navbar-toggler').click(function () {
-    $('.header-container, .navbar-toggler-icon').toggleClass('active');
+    $('.navbar-toggler-icon').toggleClass('active');
   });
-});
+}); // Text on img with mousemove
+
 var title = document.querySelector('.img-title');
+var videoOverlay = document.querySelector('.video-mouse-overlay');
 
 var onMouseMove = function onMouseMove(e) {
   var img = e.target.getBoundingClientRect();
@@ -3134,9 +3138,77 @@ var onMouseMove = function onMouseMove(e) {
   } else if (!e.target.classList.contains('img-container')) {
     title.style.visibility = "hidden";
   }
+
+  if (e.target.classList.contains('overlay')) {
+    videoOverlay.style.left = e.clientX - img.left + 'px';
+    videoOverlay.style.top = e.clientY - img.top + 'px';
+    videoOverlay.style.visibility = "visible";
+  } else if (!e.target.classList.contains('overlay')) {
+    videoOverlay.style.visibility = "hidden";
+  }
 };
 
-document.addEventListener('mousemove', onMouseMove);
+$(".overlay").click(function () {
+  $("html,body").animate({
+    scrollTop: $(".img-container").offset().top
+  }, 600);
+}); //
+//const onMouseClick = (e) => {
+//    console.log(e.target.classList.contains('video-mouse-overlay'));
+//    if (e.target.classList.contains('video-mouse-overlay')) {
+//        target.style.backgroundColor = "red";
+//    }
+//}
+
+document.addEventListener('mousemove', onMouseMove); // star spinning animation
+
+var deg = 0;
+var toggler = document.querySelector('.navbar-toggler-icon');
+var container = document.querySelector('.header-container');
+var navContainer = document.querySelector('.header-nav');
+
+var rotateAnimation = function rotateAnimation() {
+  if (!event.detail || event.detail == 1) {
+    if (deg == 45) {
+      var spin = function spin() {
+        setTimeout(function () {
+          var x = deg;
+          toggler.style.transform = "rotate(" + x + "deg)";
+          container.style.top = "-100%";
+          navContainer.style.visibility = "hidden";
+
+          if (deg > 0) {
+            spin(--deg);
+          }
+        });
+      };
+
+      spin();
+    } else {
+      var _spin = function _spin() {
+        setTimeout(function () {
+          var x = deg;
+          toggler.style.transform = "rotate(" + x + "deg)";
+          container.style.top = 0;
+          container.style.visibility = "visible";
+          navContainer.style.visibility = "visible";
+
+          if (deg < 45) {
+            _spin(++deg);
+          }
+        });
+      };
+
+      _spin();
+    }
+  }
+};
+
+$(document).ready(function () {
+  $(".navbar-toggler-icon").click(rotateAnimation);
+}); // change video playback rate
+
+document.querySelector('video').playbackRate = 3.0;
 
 /***/ }),
 

@@ -15,8 +15,6 @@ and open the template in the editor.
     background-size: cover;
     background-image:url('http://studiospica.local/wp-content/uploads/2021/06/scrnli_21-06-2021_12-48-44-1-scaled.jpg'); 
     position:relative; 
-    /*padding-bottom:100%;*/
-    /*filter: grayscale(1);*/
     cursor:none;
     height:600px;
     &:hover {
@@ -28,7 +26,7 @@ and open the template in the editor.
         transition:700ms;
     }
 }
-.img-title {
+.img-title, .video-mouse-overlay {
     font-family:$font-family-bungee-regular;
     visibility:hidden;
     pointer-events: none;
@@ -45,6 +43,12 @@ and open the template in the editor.
     margin-top: -45px;
     margin-left: -110px;
 }
-img {
+.video-mouse-overlay {
+    font-size:100px;
+    background-blend-mode: difference;  
+    margin-left: -50px;
+    margin-top: -70px;
+}
+img, .video {
     cursor: none;
 }

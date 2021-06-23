@@ -22,10 +22,13 @@ and open the template in the editor.
 .video {
     position: relative;
     background-color: #000;
-    height: 75vh;
+    height: 90vh;
     min-height: 25rem;
     width: 100%;
     overflow: hidden;
+    @media (max-width: 764px) {
+        height:85vh;
+    }
 }
 .front-video {
     filter: grayscale(1);
@@ -38,4 +41,7 @@ and open the template in the editor.
     height: 100%;
     width: 100%;
     z-index: 1;
+    & * {
+        pointer-events: none;
+    }
 }

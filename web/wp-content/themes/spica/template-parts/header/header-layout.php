@@ -14,7 +14,7 @@
         <?php endif; ?>
     </div>
 </div> 
-<div class="container-fluid header-container m-0 position-fixed py-3">
+<div class="container-fluid header-container m-0 py-3 d-flex align-items-end">
     <div class="row align-items-end">
         <div class="col d-flex justify-content-center align-items-center">
             <nav id="site-navigation" class="nav justify-content-end px-2 header-nav" role="navigation">
