@@ -5512,9 +5512,12 @@
   --color-text: black;
 }
 
-.dark-mode {
-  --color-page-background: black;
-  --color-text: white;
+.bg-quaternary {
+  background-color: #192900;
+}
+
+.bg-tertiary {
+  background-color: #e6d6ff;
 }
 
 /*!
@@ -16599,18 +16602,87 @@ and open the template in the editor.
 }
 .about-us-container * {
   color: #ffffff;
-  font-family: "Bungee Hairline", cursive;
 }
 
 .about-us-container-pt {
   background-color: #e6d6ff;
   margin-left: -3rem;
   height: 35vh;
+  animation: fadeIn 3s;
 }
 @media (max-width: 768px) {
   .about-us-container-pt {
     margin-left: 0px;
+    min-height: 600px;
   }
+  .about-us-container-pt .card-body p {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .about-us-container-pt {
+    margin-left: 0px;
+  }
+  .about-us-container-pt .card-body p {
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1660px) {
+  .about-us-container-pt {
+    margin-left: 0px;
+  }
+  .about-us-container-pt .card-body p {
+    font-size: 0.7rem;
+  }
+}
+
+.circle {
+  background-color: #e6d6ff;
+  font-size: 3.125rem;
+  height: 150px;
+  width: 150px;
+}
+.circle i {
+  color: #192900;
+}
+
+/*
+flip card
+*/
+.card {
+  border: none;
+  border-radius: 0px;
+}
+.card p {
+  font-size: 0.875rem;
+}
+
+.card-flip > div {
+  backface-visibility: hidden;
+  transition: transform 300ms;
+  transition-timing-function: linear;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+}
+
+.card-front {
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+}
+
+.card-flip:hover .card-front {
+  transform: rotateY(-180deg);
+}
+
+.card-flip:hover .card-back {
+  transform: rotateY(0deg);
 }
 
 /*# sourceMappingURL=main.css.map*/

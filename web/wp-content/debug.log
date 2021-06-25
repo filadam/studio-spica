@@ -2014,3 +2014,63 @@ Stack trace:
 #5 C:\wamp64\www\studiospica.local\web\wp-includes\template.php(676): load_template('C:\\wamp64\\www\\s...', true, Array)
 #6 C:\wamp64\www\studiospica.local\web\wp-includes\general-template.php(92): locate_template(Array, true, true, Array)
 #7 C:\wamp64\www\studiospica.local\web\wp-content\them in C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\template-parts\footer\footer-layout.php on line 14
+[25-Jun-2021 08:41:06 UTC] PHP Warning:  Use of undefined constant LISTEN - assumed 'LISTEN' (this will throw an Error in a future version of PHP) in C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\template-parts\front-page\front-about.php on line 35
+[25-Jun-2021 08:41:06 UTC] PHP Stack trace:
+[25-Jun-2021 08:41:06 UTC] PHP   1. {main}() C:\wamp64\www\studiospica.local\web\index.php:0
+[25-Jun-2021 08:41:06 UTC] PHP   2. require() C:\wamp64\www\studiospica.local\web\index.php:17
+[25-Jun-2021 08:41:06 UTC] PHP   3. require_once() C:\wamp64\www\studiospica.local\web\wp-blog-header.php:19
+[25-Jun-2021 08:41:06 UTC] PHP   4. include() C:\wamp64\www\studiospica.local\web\wp-includes\template-loader.php:106
+[25-Jun-2021 08:41:06 UTC] PHP   5. get_template_part($slug = 'template-parts/front-page/front', $name = 'about', $args = *uninitialized*) C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\front-page.php:14
+[25-Jun-2021 08:41:06 UTC] PHP   6. locate_template($template_names = [0 => 'template-parts/front-page/front-about.php', 1 => 'template-parts/front-page/front.php'], $load = TRUE, $require_once = FALSE, $args = []) C:\wamp64\www\studiospica.local\web\wp-includes\general-template.php:204
+[25-Jun-2021 08:41:06 UTC] PHP   7. load_template($_template_file = 'C:\\wamp64\\www\\studiospica.local\\web/wp-content/themes/spica/template-parts/front-page/front-about.php', $require_once = FALSE, $args = []) C:\wamp64\www\studiospica.local\web\wp-includes\template.php:676
+[25-Jun-2021 08:41:06 UTC] PHP   8. require() C:\wamp64\www\studiospica.local\web\wp-includes\template.php:732
+[25-Jun-2021 08:41:07 UTC] PHP Warning:  Use of undefined constant LEARN - assumed 'LEARN' (this will throw an Error in a future version of PHP) in C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\template-parts\front-page\front-about.php on line 35
+[25-Jun-2021 08:41:07 UTC] PHP Stack trace:
+[25-Jun-2021 08:41:07 UTC] PHP   1. {main}() C:\wamp64\www\studiospica.local\web\index.php:0
+[25-Jun-2021 08:41:07 UTC] PHP   2. require() C:\wamp64\www\studiospica.local\web\index.php:17
+[25-Jun-2021 08:41:07 UTC] PHP   3. require_once() C:\wamp64\www\studiospica.local\web\wp-blog-header.php:19
+[25-Jun-2021 08:41:07 UTC] PHP   4. include() C:\wamp64\www\studiospica.local\web\wp-includes\template-loader.php:106
+[25-Jun-2021 08:41:07 UTC] PHP   5. get_template_part($slug = 'template-parts/front-page/front', $name = 'about', $args = *uninitialized*) C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\front-page.php:14
+[25-Jun-2021 08:41:07 UTC] PHP   6. locate_template($template_names = [0 => 'template-parts/front-page/front-about.php', 1 => 'template-parts/front-page/front.php'], $load = TRUE, $require_once = FALSE, $args = []) C:\wamp64\www\studiospica.local\web\wp-includes\general-template.php:204
+[25-Jun-2021 08:41:07 UTC] PHP   7. load_template($_template_file = 'C:\\wamp64\\www\\studiospica.local\\web/wp-content/themes/spica/template-parts/front-page/front-about.php', $require_once = FALSE, $args = []) C:\wamp64\www\studiospica.local\web\wp-includes\template.php:676
+[25-Jun-2021 08:41:07 UTC] PHP   8. require() C:\wamp64\www\studiospica.local\web\wp-includes\template.php:732
+[25-Jun-2021 08:41:07 UTC] PHP Warning:  Use of undefined constant CONCEPT - assumed 'CONCEPT' (this will throw an Error in a future version of PHP) in C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\template-parts\front-page\front-about.php on line 53
+[25-Jun-2021 08:41:07 UTC] PHP Stack trace:
+[25-Jun-2021 08:41:07 UTC] PHP   1. {main}() C:\wamp64\www\studiospica.local\web\index.php:0
+[25-Jun-2021 08:41:07 UTC] PHP   2. require() C:\wamp64\www\studiospica.local\web\index.php:17
+[25-Jun-2021 08:41:07 UTC] PHP   3. require_once() C:\wamp64\www\studiospica.local\web\wp-blog-header.php:19
+[25-Jun-2021 08:41:07 UTC] PHP   4. include() C:\wamp64\www\studiospica.local\web\wp-includes\template-loader.php:106
+[25-Jun-2021 08:41:07 UTC] PHP   5. get_template_part($slug = 'template-parts/front-page/front', $name = 'about', $args = *uninitialized*) C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\front-page.php:14
+[25-Jun-2021 08:41:07 UTC] PHP   6. locate_template($template_names = [0 => 'template-parts/front-page/front-about.php', 1 => 'template-parts/front-page/front.php'], $load = TRUE, $require_once = FALSE, $args = []) C:\wamp64\www\studiospica.local\web\wp-includes\general-template.php:204
+[25-Jun-2021 08:41:07 UTC] PHP   7. load_template($_template_file = 'C:\\wamp64\\www\\studiospica.local\\web/wp-content/themes/spica/template-parts/front-page/front-about.php', $require_once = FALSE, $args = []) C:\wamp64\www\studiospica.local\web\wp-includes\template.php:676
+[25-Jun-2021 08:41:07 UTC] PHP   8. require() C:\wamp64\www\studiospica.local\web\wp-includes\template.php:732
+[25-Jun-2021 08:41:07 UTC] PHP Warning:  Use of undefined constant DESIGN - assumed 'DESIGN' (this will throw an Error in a future version of PHP) in C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\template-parts\front-page\front-about.php on line 53
+[25-Jun-2021 08:41:07 UTC] PHP Stack trace:
+[25-Jun-2021 08:41:07 UTC] PHP   1. {main}() C:\wamp64\www\studiospica.local\web\index.php:0
+[25-Jun-2021 08:41:07 UTC] PHP   2. require() C:\wamp64\www\studiospica.local\web\index.php:17
+[25-Jun-2021 08:41:07 UTC] PHP   3. require_once() C:\wamp64\www\studiospica.local\web\wp-blog-header.php:19
+[25-Jun-2021 08:41:07 UTC] PHP   4. include() C:\wamp64\www\studiospica.local\web\wp-includes\template-loader.php:106
+[25-Jun-2021 08:41:07 UTC] PHP   5. get_template_part($slug = 'template-parts/front-page/front', $name = 'about', $args = *uninitialized*) C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\front-page.php:14
+[25-Jun-2021 08:41:07 UTC] PHP   6. locate_template($template_names = [0 => 'template-parts/front-page/front-about.php', 1 => 'template-parts/front-page/front.php'], $load = TRUE, $require_once = FALSE, $args = []) C:\wamp64\www\studiospica.local\web\wp-includes\general-template.php:204
+[25-Jun-2021 08:41:07 UTC] PHP   7. load_template($_template_file = 'C:\\wamp64\\www\\studiospica.local\\web/wp-content/themes/spica/template-parts/front-page/front-about.php', $require_once = FALSE, $args = []) C:\wamp64\www\studiospica.local\web\wp-includes\template.php:676
+[25-Jun-2021 08:41:07 UTC] PHP   8. require() C:\wamp64\www\studiospica.local\web\wp-includes\template.php:732
+[25-Jun-2021 08:41:07 UTC] PHP Warning:  Use of undefined constant CREATE - assumed 'CREATE' (this will throw an Error in a future version of PHP) in C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\template-parts\front-page\front-about.php on line 71
+[25-Jun-2021 08:41:07 UTC] PHP Stack trace:
+[25-Jun-2021 08:41:07 UTC] PHP   1. {main}() C:\wamp64\www\studiospica.local\web\index.php:0
+[25-Jun-2021 08:41:07 UTC] PHP   2. require() C:\wamp64\www\studiospica.local\web\index.php:17
+[25-Jun-2021 08:41:07 UTC] PHP   3. require_once() C:\wamp64\www\studiospica.local\web\wp-blog-header.php:19
+[25-Jun-2021 08:41:07 UTC] PHP   4. include() C:\wamp64\www\studiospica.local\web\wp-includes\template-loader.php:106
+[25-Jun-2021 08:41:07 UTC] PHP   5. get_template_part($slug = 'template-parts/front-page/front', $name = 'about', $args = *uninitialized*) C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\front-page.php:14
+[25-Jun-2021 08:41:07 UTC] PHP   6. locate_template($template_names = [0 => 'template-parts/front-page/front-about.php', 1 => 'template-parts/front-page/front.php'], $load = TRUE, $require_once = FALSE, $args = []) C:\wamp64\www\studiospica.local\web\wp-includes\general-template.php:204
+[25-Jun-2021 08:41:07 UTC] PHP   7. load_template($_template_file = 'C:\\wamp64\\www\\studiospica.local\\web/wp-content/themes/spica/template-parts/front-page/front-about.php', $require_once = FALSE, $args = []) C:\wamp64\www\studiospica.local\web\wp-includes\template.php:676
+[25-Jun-2021 08:41:07 UTC] PHP   8. require() C:\wamp64\www\studiospica.local\web\wp-includes\template.php:732
+[25-Jun-2021 08:41:07 UTC] PHP Warning:  Use of undefined constant DELIVER - assumed 'DELIVER' (this will throw an Error in a future version of PHP) in C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\template-parts\front-page\front-about.php on line 71
+[25-Jun-2021 08:41:07 UTC] PHP Stack trace:
+[25-Jun-2021 08:41:07 UTC] PHP   1. {main}() C:\wamp64\www\studiospica.local\web\index.php:0
+[25-Jun-2021 08:41:07 UTC] PHP   2. require() C:\wamp64\www\studiospica.local\web\index.php:17
+[25-Jun-2021 08:41:07 UTC] PHP   3. require_once() C:\wamp64\www\studiospica.local\web\wp-blog-header.php:19
+[25-Jun-2021 08:41:07 UTC] PHP   4. include() C:\wamp64\www\studiospica.local\web\wp-includes\template-loader.php:106
+[25-Jun-2021 08:41:07 UTC] PHP   5. get_template_part($slug = 'template-parts/front-page/front', $name = 'about', $args = *uninitialized*) C:\wamp64\www\studiospica.local\web\wp-content\themes\spica\front-page.php:14
+[25-Jun-2021 08:41:07 UTC] PHP   6. locate_template($template_names = [0 => 'template-parts/front-page/front-about.php', 1 => 'template-parts/front-page/front.php'], $load = TRUE, $require_once = FALSE, $args = []) C:\wamp64\www\studiospica.local\web\wp-includes\general-template.php:204
+[25-Jun-2021 08:41:07 UTC] PHP   7. load_template($_template_file = 'C:\\wamp64\\www\\studiospica.local\\web/wp-content/themes/spica/template-parts/front-page/front-about.php', $require_once = FALSE, $args = []) C:\wamp64\www\studiospica.local\web\wp-includes\template.php:676
+[25-Jun-2021 08:41:07 UTC] PHP   8. require() C:\wamp64\www\studiospica.local\web\wp-includes\template.php:732

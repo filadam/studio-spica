@@ -3105,6 +3105,25 @@ function within(min, value, max) {
 
 /***/ }),
 
+/***/ "./assets/js/aboutus.js":
+/*!******************************!*\
+  !*** ./assets/js/aboutus.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+/* provided dependency */ var $ = __webpack_require__(/*! ./node_modules/jquery */ "./node_modules/jquery/dist/jquery.js");
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+$('.about-us-container').click(function () {
+  $(".card-front").css("transform", "rotateY(-180deg)");
+  $(".card-back").css("transform", "rotateY(0deg)");
+});
+
+/***/ }),
+
 /***/ "./assets/js/header.js":
 /*!*****************************!*\
   !*** ./assets/js/header.js ***!
@@ -3152,14 +3171,7 @@ $(".overlay").click(function () {
   $("html,body").animate({
     scrollTop: $(".img-container").offset().top
   }, 600);
-}); //
-//const onMouseClick = (e) => {
-//    console.log(e.target.classList.contains('video-mouse-overlay'));
-//    if (e.target.classList.contains('video-mouse-overlay')) {
-//        target.style.backgroundColor = "red";
-//    }
-//}
-
+});
 document.addEventListener('mousemove', onMouseMove); // star spinning animation
 
 var deg = 0;
@@ -19173,6 +19185,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./header */ "./assets/js/header.js");
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_header__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _aboutus__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./aboutus */ "./assets/js/aboutus.js");
+/* harmony import */ var _aboutus__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_aboutus__WEBPACK_IMPORTED_MODULE_4__);
 // Import style
  // Import jQuery
 
@@ -19182,6 +19196,9 @@ __webpack_require__.r(__webpack_exports__);
  // Import other script
 
 
+ //init AOS
+
+AOS.init();
 })();
 
 /******/ })()

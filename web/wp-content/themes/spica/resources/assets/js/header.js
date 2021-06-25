@@ -39,14 +39,6 @@ $(".overlay").click(function () {
 }
 )
 
-//
-//const onMouseClick = (e) => {
-//    console.log(e.target.classList.contains('video-mouse-overlay'));
-//    if (e.target.classList.contains('video-mouse-overlay')) {
-//        target.style.backgroundColor = "red";
-//    }
-//}
-
 document.addEventListener('mousemove', onMouseMove);
 
 // star spinning animation

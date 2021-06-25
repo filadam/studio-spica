@@ -14,14 +14,77 @@ and open the template in the editor.
     height:75vh;
     * {
         color:$secondary;
-        font-family: $font-family-bungee-hairline;
     }
 }
 .about-us-container-pt {
     background-color:$tertiary;
     margin-left: -3 * $spacer;
     height:35vh;
+    animation: fadeIn 3s;
     @media (max-width: 768px ) {
         margin-left: 0px;
+        min-height:600px;
+        .card-body p {
+            font-size: 0.7rem;
+        }
     }
+    @media (min-width:768px) and (max-width:1200px) {
+        margin-left: 0px;
+        .card-body p {
+            font-size: $font-size-sm;
+        }
+    }
+    @media (min-width:1201px) and (max-width:1660px) {
+        margin-left: 0px;
+        .card-body p {
+            font-size: 0.7rem;
+        }
+    }
+}
+.circle {
+    background-color: $tertiary;
+    font-size: $font-size-xl;
+    height:150px;
+    width:150px;
+    i {
+        color:$quaternary;  
+    } 
+
+}
+/*
+flip card
+*/
+.card {
+    border:none;
+    border-radius: 0px;
+    p {
+        font-size: $font-size-sm;
+    }
+}
+.card-flip > div {
+    backface-visibility: hidden;
+    transition: transform 300ms;
+    transition-timing-function: linear;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+}
+
+.card-front {
+    transform: rotateY(0deg);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+}
+
+.card-flip:hover .card-front {
+    transform: rotateY(-180deg);
+}
+
+.card-flip:hover .card-back {
+    transform: rotateY(0deg);
 }

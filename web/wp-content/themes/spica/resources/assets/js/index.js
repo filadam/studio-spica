@@ -11,3 +11,8 @@ import { Tooltip, Toast, Popover, Modal } from 'bootstrap';
 // Import other script
 
 import './header';
+import './aboutus';
+
+//init AOS
+
+AOS.init();

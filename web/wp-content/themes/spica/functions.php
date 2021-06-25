@@ -157,11 +157,20 @@ function change_comment_form($defaults)
 }
 add_filter('comment_form_defaults', 'change_comment_form');
 
-function register_my_menus() {
-  register_nav_menus(
-    array(
-      'secondary-menu' => __( 'Secondary Menu' ),
-    )
-  );
+function register_my_menus()
+{
+    register_nav_menus(
+        array(
+            'secondary-menu' => __('Secondary Menu'),
+        )
+    );
 }
-add_action( 'init', 'register_my_menus' );
+add_action('init', 'register_my_menus');
+
+add_action('wp_enqueue_scripts', 'add_aos_animation');
+
+function add_aos_animation()
+{
+    wp_enqueue_style('AOS_animate', 'https://unpkg.com/aos@next/dist/aos.css', false, null);
+    wp_enqueue_script('AOS', 'https://unpkg.com/aos@next/dist/aos.js', false, null, true);
+}

@@ -8,6 +8,7 @@
 $primary:   #000000 !default;
 $secondary: #ffffff !default;
 $tertiary: #e6d6ff !default;
+$quaternary: #192900;
 
 $color-black: rgb(0,0,0);
 $color-white: rgb(255,255,255);
@@ -16,10 +17,11 @@ $color-white: rgb(255,255,255);
     --color-page-background: #{$color-white};
     --color-text: #{$color-black};
 }
-
-.dark-mode {
-    --color-page-background: #{$color-black};
-    --color-text: #{$color-white};
+.bg-quaternary {
+    background-color: $quaternary;
+}
+.bg-tertiary {
+    background-color:$tertiary;
 }
 // Your variable overrides
 // Colors
