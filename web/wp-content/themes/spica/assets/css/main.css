@@ -16597,18 +16597,22 @@ and open the template in the editor.
     Author     : Web Solutions WEB Team <webmaster@web-solutions.eu>
 */
 .about-us-container {
-  background-color: black;
+  background-color: #ffffff;
   height: 75vh;
 }
-.about-us-container * {
-  color: #ffffff;
+.about-us-container * p:not(.card) p:not(.card-text) {
+  color: #000000;
+  text-align: justify;
 }
 
 .about-us-container-pt {
   background-color: #e6d6ff;
-  margin-left: -3rem;
-  height: 35vh;
+  margin-left: 3rem;
+  position: absolute;
+  height: 55vh;
   animation: fadeIn 3s;
+  mix-blend-mode: multiply;
+  pointer-events: none !important;
 }
 @media (max-width: 768px) {
   .about-us-container-pt {
@@ -16627,7 +16631,7 @@ and open the template in the editor.
     font-size: 0.875rem;
   }
 }
-@media (min-width: 1201px) and (max-width: 1660px) {
+@media (min-width: 1201px) and (max-width: 1690px) {
   .about-us-container-pt {
     margin-left: 0px;
   }
@@ -16636,14 +16640,15 @@ and open the template in the editor.
   }
 }
 
-.circle {
-  background-color: #e6d6ff;
-  font-size: 3.125rem;
-  height: 150px;
-  width: 150px;
-}
-.circle i {
-  color: #192900;
+.shining-star {
+  transform: scale(0.5);
+  height: 60px;
+  width: 60px;
+  background-color: transparent;
+  box-shadow: 0 0 0 10px #e6d6ff;
+  border-radius: 50%;
+  transition-delay: 300ms;
+  transition-duration: 1000ms;
 }
 
 /*
@@ -16652,6 +16657,8 @@ flip card
 .card {
   border: none;
   border-radius: 0px;
+  height: 35vh;
+  background-color: transparent;
 }
 .card p {
   font-size: 0.875rem;
@@ -16683,6 +16690,25 @@ flip card
 
 .card-flip:hover .card-back {
   transform: rotateY(0deg);
+}
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    File name  : background-video.scss
+    Created on : Jun 28, 2021
+    Author     : Web Solutions WEB Team <webmaster@web-solutions.eu>
+*/
+.background-video {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=main.css.map*/

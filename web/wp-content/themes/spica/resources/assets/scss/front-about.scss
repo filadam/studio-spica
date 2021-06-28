@@ -10,22 +10,26 @@ and open the template in the editor.
 */
 
 .about-us-container {
-    background-color:black;
+    background-color:$secondary;
     height:75vh;
-    * {
-        color:$secondary;
+    * p:not(.card) p:not(.card-text) {
+        color:$primary;
+        text-align: justify;
     }
 }
 .about-us-container-pt {
     background-color:$tertiary;
-    margin-left: -3 * $spacer;
-    height:35vh;
+    margin-left: 3 * $spacer;
+    position:absolute;
+    height:55vh;
     animation: fadeIn 3s;
+    mix-blend-mode: multiply;
+    pointer-events: none!important;
     @media (max-width: 768px ) {
         margin-left: 0px;
         min-height:600px;
         .card-body p {
-            font-size: 0.7rem;
+            font-size: $font-size-xsm;
         }
     }
     @media (min-width:768px) and (max-width:1200px) {
@@ -34,29 +38,32 @@ and open the template in the editor.
             font-size: $font-size-sm;
         }
     }
-    @media (min-width:1201px) and (max-width:1660px) {
+    @media (min-width:1201px) and (max-width:1690px) {
         margin-left: 0px;
         .card-body p {
-            font-size: 0.7rem;
+            font-size: $font-size-xsm;
         }
     }
 }
-.circle {
-    background-color: $tertiary;
-    font-size: $font-size-xl;
-    height:150px;
-    width:150px;
-    i {
-        color:$quaternary;  
-    } 
-
+.shining-star {
+    transform: scale(0.5);
+    height:60px;
+    width:60px;
+    background-color:transparent;
+    box-shadow: 0 0 0 10px $tertiary;
+    border-radius: 50%;
+    transition-delay: 300ms;
+    transition-duration:1000ms;
 }
+
 /*
 flip card
 */
 .card {
     border:none;
     border-radius: 0px;
+    height: 35vh;
+    background-color: transparent;
     p {
         font-size: $font-size-sm;
     }

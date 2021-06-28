@@ -19,16 +19,10 @@
                  dostosowane do ich potrzeb biznesowych i konsumenckich. W trzech prostych krokach tworzymy koncepcje, które trafiają na rynek docelowy naszych klientów,
                  zwiększyć bazę klientów i ostatecznie pozwolić markom na rozkwit.') ?>
                 </p>
-<!--                <div class="circle m-3 p-3 d-flex align-items-center justify-content-center"><i class="bi bi-code-slash"></i></div>
-                <div class="circle m-3 p-3 d-flex align-items-center justify-content-center"><i class="bi bi-bounding-box-circles"></i></div>
-                <div class="circle m-3 p-3 d-flex align-items-center justify-content-center"><i class="bi bi-card-image"></i></div>
-                <div class="circle m-3 p-3 d-flex align-items-center justify-content-center"><i class="bi bi-bar-chart-line"></i></div>-->
             </div>
-        </div>
-        <div class="col-xl-5 col-sm-12 about-us-container-pt align-self-center" data-aos="fade-left">
-            <div class="row h-100"> 
+            <div class="row p-2"> 
                 <div class="col p-0">
-                    <div class="card card-flip h-100">
+                    <div class="card card-flip star-sm">
                         <div class="card-front bg-quaternary text-white">
                             <div class="card-body d-flex flex-column justify-content-between">
                                 <h3 class="card-title">1</h3>
@@ -49,7 +43,7 @@
                     </div>
                 </div>
                 <div class="col p-0"> 
-                    <div class="card card-flip h-100">
+                    <div class="card card-flip star-md">
                         <div class="card-front text-black bg-tertiary">
                             <div class="card-body d-flex flex-column justify-content-between">
                                 <h3 class="card-title">2</h3>
@@ -70,7 +64,7 @@
                     </div>
                 </div>
                 <div class="col p-0">
-                    <div class="card card-flip h-100">
+                    <div class="card card-flip star-xl">
                         <div class="card-front text-white bg-primary">
                             <div class="card-body d-flex flex-column justify-content-between">
                                 <h3 class="card-title">3</h3>
@@ -79,7 +73,7 @@
                         </div>
                         <div class="card-back bg-tertiary">
                             <div class="card-body d-flex flex-column justify-content-between">
-                                <h3 class="card-title"><i class="bi bi-gear-fill"></i></i></h3>
+                                <h3 class="card-title"><i class="bi bi-gear-fill"></i></h3>
                                 <p class="card-text"><?php
                                     _e('Sposób, w jaki ludzie angażują się w marki, ewoluuje każdego dnia. '
                                         . 'Wyprzedzamy grę w naszej branży, pozwalając nam tworzyć najwyższej '
@@ -91,6 +85,14 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="col bg-white d-flex justify-content-center align-items-center">
+            <div class="shining-star">
+
+            </div>
+        </div>
+        <div class="col-xl-5 col-sm-12 about-us-container-pt align-self-center" data-aos="fade-left" data-aos-delay="600">
+
         </div>
     </div>
 </div>

@@ -12,7 +12,7 @@ get_header();
 <div class="row m-0">
     <?php get_template_part('template-parts/front-page/front', 'video'); ?>
     <?php get_template_part('template-parts/front-page/front', 'about'); ?>
-    <?php get_template_part('template-parts/front-page/front', 'projects'); ?>
+     <?php get_template_part('template-parts/front-page/front', 'projects'); ?>
 </div>
 
 <?php
