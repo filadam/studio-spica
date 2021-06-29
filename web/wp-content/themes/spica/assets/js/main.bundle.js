@@ -3201,7 +3201,7 @@ var navContainer = document.querySelector('.header-nav');
 
 var rotateAnimation = function rotateAnimation() {
   if (!event.detail || event.detail == 1) {
-    if (deg == 45) {
+    if (deg == 35) {
       var spin = function spin() {
         setTimeout(function () {
           var x = deg;
@@ -3225,7 +3225,7 @@ var rotateAnimation = function rotateAnimation() {
           container.style.visibility = "visible";
           navContainer.style.visibility = "visible";
 
-          if (deg < 45) {
+          if (deg < 35) {
             _spin(++deg);
           }
         });

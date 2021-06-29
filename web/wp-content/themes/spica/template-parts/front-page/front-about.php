@@ -7,12 +7,12 @@
 
 ?>
 
-<div class="container-fluid py-5">
+<div class="container-fluid py-lg-5">
     <div class="row">
         <div class="col-xl-7 col-sm-12 about-us-container d-flex align-items-center px-3 py-3 flex-column" data-aos="fade-up">
             <div class="row d-flex align-items-center justify-content-center ">
                 <h1>
-                    <?php _e('PROSTE PODEJŚCIE, KTÓRE DZIAŁA!') ?>
+                    <?php _e('Sprawimy, że zabłyśniesz!') ?>
                 </h1>
                 <p class="mb-5">
                     <?php _e('Po prostu pomagamy firmom nawiązać kontakt z ich klientami, tworząc piękne i wciągające doświadczenia,
@@ -86,13 +86,13 @@
                 </div>
             </div>
         </div>
-        <div class="col bg-white d-flex justify-content-center align-items-center">
+        <div class="col bg-white justify-content-center align-items-center d-none d-sm-flex">
             <div class="shining-star">
 
             </div>
         </div>
-        <div class="col-xl-5 col-sm-12 about-us-container-pt align-self-center" data-aos="fade-left" data-aos-delay="600">
+<!--        <div class="col-xl-5 col-sm-12 about-us-container-pt align-self-center" data-aos="fade-left" data-aos-delay="600">
 
-        </div>
+        </div>-->
     </div>
 </div>

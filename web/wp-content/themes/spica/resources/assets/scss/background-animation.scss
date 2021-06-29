@@ -1,0 +1,96 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    File name  : background-animation.scss
+    Created on : Jun 29, 2021
+    Author     : Web Solutions WEB Team <webmaster@web-solutions.eu>
+*/
+
+
+
+// n is number of stars required
+@function multiple-box-shadow ($n)  {
+    $colors: #ffffff, #e6d6ff, #d9d6ff, #d6e7ff, #d6fbff;
+    $key: random( length($colors) );
+    $nth: nth( $colors, $key );
+    $random: $nth !default;
+    $value: '#{random(2000)}px #{random(2000)}px #{$nth}';
+    @for $i from 2 through $n {
+        $colors: #ffffff, #e6d6ff, #d9d6ff, #d6e7ff, #d6fbff;
+        $key: random( length($colors) );
+        $nth: nth( $colors, $key );
+        $random: $nth !default;
+        $value: '#{$value} , #{random(2000)}px #{random(2000)}px #{$nth}';
+    }
+    @return unquote($value)
+}
+$shadows-small:  multiple-box-shadow(700);
+$shadows-medium: multiple-box-shadow(200);
+$shadows-big:    multiple-box-shadow(100);
+
+#stars {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $shadows-small;
+    animation: rotateStar 200ms linear infinite , animStar 90s linear infinite;
+    &:after {
+        content: " ";
+        position: absolute;
+        left: 2000px;
+        width: 1px;
+        height: 1px;
+        background: transparent;
+        box-shadow: $shadows-small;
+    }
+}
+
+#stars2 {
+    width: 4px;
+    height: 4px;
+    background: transparent;
+    box-shadow: $shadows-medium;
+    animation: rotateStar 200ms linear infinite , animStar 90s linear infinite;
+    &:after{
+        content: " ";
+        position: absolute;
+        left: 2000px;
+        width: 4px;
+        height: 4px;
+        background: transparent;
+        box-shadow: $shadows-medium;
+    }
+}
+
+#stars3 {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    box-shadow: $shadows-big;
+    animation: rotateStar 200ms , animStar 90s linear infinite;
+    &:after{
+        content: " ";
+        position: absolute;
+        left: 2000px;
+        width: 10px;
+        height: 10px;
+        background: transparent;
+        box-shadow: $shadows-big;
+    }
+}
+
+@keyframes animStar {
+    from	{
+        transform: translateX(0px); }
+    to		{
+        transform: translateX(-2000px); }
+}
+/*@keyframes rotateStar {
+    from	{
+        box-shadow: $shadows-medium; }
+    to		{
+        box-shadow: $shadows-big; }
+}*/

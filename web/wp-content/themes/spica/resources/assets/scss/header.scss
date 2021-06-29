@@ -25,15 +25,15 @@
     width:60px;
     z-index: 999;
     mix-blend-mode: difference;
-    fill:$tertiary;
     &:focus {
         text-decoration: none;
         outline: 0;
         box-shadow: unset;
     }
     .navbar-toggler-icon {
-        height:60px;
-        width:60px;
+        fill:$tertiary;
+        height:50px;
+        width:50px;
         position: fixed;
         &.active {
         }

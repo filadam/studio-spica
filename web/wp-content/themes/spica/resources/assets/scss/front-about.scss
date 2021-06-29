@@ -6,12 +6,13 @@ and open the template in the editor.
 /*
     File name  : front-about.scss
     Created on : Jun 23, 2021
-    Author     : Web Solutions WEB Team <webmaster@web-solutions.eu>
+    Author     : SPICA Filip Adamczyk
 */
 
 .about-us-container {
     background-color:$secondary;
-    height:75vh;
+    height: 100%;
+    
     * p:not(.card) p:not(.card-text) {
         color:$primary;
         text-align: justify;
@@ -46,12 +47,12 @@ and open the template in the editor.
     }
 }
 .shining-star {
-    transform: scale(0.5);
+    transform: rotate(45deg) scale(0.5);
     height:60px;
     width:60px;
     background-color:transparent;
     box-shadow: 0 0 0 10px $tertiary;
-    border-radius: 50%;
+    /*border-radius: 50%;*/
     transition-delay: 300ms;
     transition-duration:1000ms;
 }
