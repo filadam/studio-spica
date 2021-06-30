@@ -31,9 +31,9 @@ $time-step: $time/$max;
         }
     }
 }
-
-.text-2, .text-3, .text-4, .text-5, .text-snugly {
-    font: 5em/1 $font-family-bungee-regular;
+.text-2, .text-4 {
+    paint-order: stroke;
+    font: 3em/1 $font-family-bungee-regular;
     text-transform: uppercase;
     fill: none;
     stroke-width: 3;

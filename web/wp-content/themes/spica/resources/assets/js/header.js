@@ -49,7 +49,7 @@ let container = document.querySelector('.header-container');
 let navContainer = document.querySelector('.header-nav');
 let rotateAnimation = () => {
     if (!event.detail || event.detail == 1) {
-        if (deg == 35) {
+        if (deg == 90) {
             let spin = () => {
                 setTimeout(() => {
                     let x = deg;
@@ -70,7 +70,7 @@ let rotateAnimation = () => {
                     container.style.top = 0;
                     container.style.visibility = "visible";
                     navContainer.style.visibility = "visible";
-                    if (deg < 35) {
+                    if (deg < 90) {
                         spin(++deg);
                     }
                 })

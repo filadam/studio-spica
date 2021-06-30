@@ -8,19 +8,30 @@ and open the template in the editor.
     Created on : Jun 18, 2021
     Author     : Web Solutions WEB Team <webmaster@web-solutions.eu>
 */
+.img-wrapper {
+
+}
+.info-square {
+    height:300px;
+    width:300px;
+    background-color:$tertiary;
+}
 .img-container {
+    mix-blend-mode: luminosity;
+    height:500px;
+    width:500px;
     overflow: hidden;
-    background-color: $secondary;
+    background-color: transparent;
     background-position: top;
     background-size: cover;
-    background-image:url('http://studiospica.local/wp-content/uploads/2021/06/scrnli_21-06-2021_12-48-44-1-scaled.jpg'); 
+    background-image:url('http://studiospica.local/wp-content/uploads/2021/06/sqc.jpg'); 
     position:relative; 
     cursor:none;
-    height:600px;
     &:hover {
-        /*background-image:url('http://studiospica.local/wp-content/uploads/2021/06/scrnli_21-06-2021_12-48-44-2-scaled.jpg');*/
+        background-image:url('http://studiospica.local/wp-content/uploads/2021/06/sqc.jpg');
         transition:700ms;
-        background-position: bottom;
+        mix-blend-mode: initial;
+        /*background-position: bottom;*/
     }
     &:not(:hover) {
         transition:700ms;

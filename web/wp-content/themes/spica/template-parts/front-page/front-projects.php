@@ -6,9 +6,39 @@
  */
 
 ?>
-<div class="row pt-5">
-    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 img-container">
-        <div class="img-title" style="">SNUGLY</div>
+<div class="container-fluid py-5">
+    <div class="row bg-quaternary">
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+            <div class="img-container my-5" data-aos="zoom-in">
+                <div class="img-title" style="">SNUGLY</div>
+            </div>
+        </div>
+    </div>
+    <div class="row bg-tertiary">
+        <div class="col">
+            <div class="img-container my-5" data-aos="zoom-in">
+                <div class="img-title" style="">SNUGLY</div>
+            </div>
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+
+        </div>
+    </div>
+    <div class="row bg-primary">
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+            <div class="img-container my-5" data-aos="zoom-in">
+                <div class="img-title" style="">SNUGLY</div>
+            </div>
+        </div>
     </div>
 </div>
-    

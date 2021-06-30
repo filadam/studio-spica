@@ -7,15 +7,16 @@
 
 ?>
 
-<div class="row m-5 p-0 g-0 video">
+<div class="row m-0 p-0 g-0 video">
     <div class="overlay d-flex align-items-center justify-content-end">
         <div class="col-xl-6 col">
             <svg viewBox="0 0 600 300">
+
             <symbol id="s-text-2">
-                <text text-anchor="middle" x="50%" y="20%" dy=".35em"><?php _e('Szukasz') ?></text>
-                <text text-anchor="middle" x="50%" y="50%" dy=".35em"><?php _e('swojej') ?></text>
-                <text text-anchor="middle" x="50%" y="80%" dy=".35em"><?php _e('strony?') ?></text>
+                <text text-anchor="middle" x="50%" y="40%" dy=".35em"><?php _e('Latasz i szukasz') ?></text>
+                <text text-anchor="middle" x="50%" y="60%" dy=".35em"><?php _e('swojej WWW?') ?></text>
             </symbol>
+
             <use class="text-2" xlink:href="#s-text-2"></use> 
             <use class="text-2" xlink:href="#s-text-2"></use>
             <use class="text-2" xlink:href="#s-text-2"></use>

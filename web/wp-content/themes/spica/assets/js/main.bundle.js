@@ -3125,7 +3125,7 @@ function within(min, value, max) {
 $('.star-xl').hover(function () {
   $(this).css('z-index', '1000');
   $('.shining-star').css('box-shadow', '0 0 0 3000px #e6d6ff');
-  $('.shining-star').css('transform', 'scale(1.5)');
+  $('.shining-star').css('transform', 'scale(1)');
   $('.shining-star').css('background-color', 'black');
 }, function () {
   $(this).delay(600).queue(function (next) {
@@ -3133,13 +3133,15 @@ $('.star-xl').hover(function () {
     next();
   });
   $('.shining-star').css('box-shadow', '0 0 0 10px #e6d6ff');
-  $('.shining-star').css('background-color', 'transparent');
+  $('.shining-star').css('background-color', 'black');
+  $('.shining-star').css('transform', 'scale(0.5)');
 });
 $('.star-md').hover(function () {
-  $('.shining-star').css('transform', 'scale(1.5)');
+  $('.shining-star').css('box-shadow', '0 0 0 10px #e6d6ff');
 });
 $('.star-sm').hover(function () {
   $('.shining-star').css('transform', 'scale(0.5)');
+  $('.shining-star').css('box-shadow', '0 0 0 0px #e6d6ff');
 });
 
 /***/ }),
@@ -3201,7 +3203,7 @@ var navContainer = document.querySelector('.header-nav');
 
 var rotateAnimation = function rotateAnimation() {
   if (!event.detail || event.detail == 1) {
-    if (deg == 35) {
+    if (deg == 90) {
       var spin = function spin() {
         setTimeout(function () {
           var x = deg;
@@ -3225,7 +3227,7 @@ var rotateAnimation = function rotateAnimation() {
           container.style.visibility = "visible";
           navContainer.style.visibility = "visible";
 
-          if (deg < 35) {
+          if (deg < 90) {
             _spin(++deg);
           }
         });

@@ -8,8 +8,11 @@
 ?>
 
 <div class="container-fluid py-lg-5">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
     <div class="row">
-        <div class="col-xl-7 col-sm-12 about-us-container d-flex align-items-center px-3 py-3 flex-column" data-aos="fade-up">
+        <div class="col-xl-7 col-sm-12 about-us-container d-flex align-items-center justify-content-center px-3 py-3 flex-column" data-aos="zoom-in">
             <div class="row d-flex align-items-center justify-content-center ">
                 <h1>
                     <?php _e('Sprawimy, że zabłyśniesz!') ?>
@@ -20,7 +23,7 @@
                  zwiększyć bazę klientów i ostatecznie pozwolić markom na rozkwit.') ?>
                 </p>
             </div>
-            <div class="row p-2"> 
+            <div class="row g-0"> 
                 <div class="col p-0">
                     <div class="card card-flip star-sm">
                         <div class="card-front bg-quaternary text-white">
@@ -31,7 +34,7 @@
                         </div>
                         <div class="card-back bg-white text-black">
                             <div class="card-body d-flex flex-column justify-content-between">
-                                <h3 class="card-title"><i class="bi bi-briefcase-fill"></i></h3>
+                                <h3 class="card-title"><i class="bi bi-briefcase"></i></h3>
                                 <p class="card-text"><?php
                                     _e('Chodzi o Ciebie i Twoich klientów i tam zaczyna się nasza podróż. Dowiedzenie się wszystkiego, '
                                         . 'co możemy o biznesie i rynku naszych klientów, pozwala nam zebrać badania, '
@@ -52,7 +55,7 @@
                         </div>
                         <div class="card-back bg-quaternary text-white">
                             <div class="card-body d-flex flex-column justify-content-between">
-                                <h3 class="card-title"><i class="bi bi-brush-fill"></i></h3>
+                                <h3 class="card-title"><i class="bi bi-box"></i></h3>
                                 <p class="card-text"><?php
                                     _e('Doświadczenie marki kształtuje postrzeganie firmy przez ludzi. '
                                         . 'Dlatego łączymy idee oparte na strategii, które motywują ludzi do działania, z projektami, '
@@ -73,7 +76,7 @@
                         </div>
                         <div class="card-back bg-tertiary">
                             <div class="card-body d-flex flex-column justify-content-between">
-                                <h3 class="card-title"><i class="bi bi-gear-fill"></i></h3>
+                                <h3 class="card-title"><i class="bi bi-code-slash"></i></h3>
                                 <p class="card-text"><?php
                                     _e('Sposób, w jaki ludzie angażują się w marki, ewoluuje każdego dnia. '
                                         . 'Wyprzedzamy grę w naszej branży, pozwalając nam tworzyć najwyższej '
@@ -91,8 +94,8 @@
 
             </div>
         </div>
-<!--        <div class="col-xl-5 col-sm-12 about-us-container-pt align-self-center" data-aos="fade-left" data-aos-delay="600">
+        <div class="col-xl-5 col-sm-12 about-us-container-pt align-self-center" data-aos="fade-up" data-aos-delay="600">
 
-        </div>-->
+        </div>
     </div>
 </div>

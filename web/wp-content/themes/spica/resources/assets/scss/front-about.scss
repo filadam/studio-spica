@@ -10,9 +10,7 @@ and open the template in the editor.
 */
 
 .about-us-container {
-    background-color:$secondary;
-    height: 100%;
-    
+    height: 100vh;
     * p:not(.card) p:not(.card-text) {
         color:$primary;
         text-align: justify;
@@ -22,7 +20,7 @@ and open the template in the editor.
     background-color:$tertiary;
     margin-left: 3 * $spacer;
     position:absolute;
-    height:55vh;
+    height:100%;
     animation: fadeIn 3s;
     mix-blend-mode: multiply;
     pointer-events: none!important;
@@ -47,11 +45,12 @@ and open the template in the editor.
     }
 }
 .shining-star {
-    transform: rotate(45deg) scale(0.5);
-    height:60px;
-    width:60px;
-    background-color:transparent;
-    box-shadow: 0 0 0 10px $tertiary;
+    transform: scale(0.5);
+    height:20px;
+    width:20px;
+    background-color:black;
+    box-shadow: 0 0 0 0px $tertiary;
+    mix-blend-mode:multiply;
     /*border-radius: 50%;*/
     transition-delay: 300ms;
     transition-duration:1000ms;
