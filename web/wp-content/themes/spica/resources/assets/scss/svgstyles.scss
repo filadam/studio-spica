@@ -11,8 +11,8 @@ and open the template in the editor.
 
 
 /*$colors: #ffffff, #e3efff, #efe3ff, #e3fff5, #ffe3ed;*/
-$colorsWhite: #ffffff, #e6d6ff, #d9d6ff, #d6e7ff, #d6fbff;
-$colors: #ffffff, #e6d6ff, #d9d6ff, #d6e7ff, #d6fbff;
+$colorsWhite: #ffffff, $tertiary, $primary, $secondary, $secondary;
+$colors: #ffffff, $tertiary, $primary, $secondary, $secondary;
 $max: length($colors);
 $max2: length($colorsWhite);
 $dash: 70;

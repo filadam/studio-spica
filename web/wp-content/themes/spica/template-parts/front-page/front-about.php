@@ -8,11 +8,11 @@
 ?>
 
 <div class="container-fluid py-lg-5">
-    <div id="stars"></div>
+<!--    <div id="stars"></div>
     <div id="stars2"></div>
-    <div id="stars3"></div>
+    <div id="stars3"></div>-->
     <div class="row">
-        <div class="col-xl-7 col-sm-12 about-us-container d-flex align-items-center justify-content-center px-3 py-3 flex-column" data-aos="zoom-in">
+        <div class="col-xl-7 col-sm-12 about-us-container d-flex align-items-center justify-content-center px-3 py-3 flex-column">
             <div class="row d-flex align-items-center justify-content-center ">
                 <h1>
                     <?php _e('Sprawimy, że zabłyśniesz!') ?>
@@ -89,13 +89,13 @@
                 </div>
             </div>
         </div>
-        <div class="col bg-white justify-content-center align-items-center d-none d-sm-flex">
+        <div class="col justify-content-center align-items-center d-none d-sm-flex">
             <div class="shining-star">
 
             </div>
         </div>
-        <div class="col-xl-5 col-sm-12 about-us-container-pt align-self-center" data-aos="fade-up" data-aos-delay="600">
+        <!--<div class="col-xl-5 col-sm-12 mt-5 about-us-container-pt align-self-center">-->
 
-        </div>
+        <!--</div>-->
     </div>
 </div>

@@ -3146,6 +3146,67 @@ $('.star-sm').hover(function () {
 
 /***/ }),
 
+/***/ "./assets/js/animate.js":
+/*!******************************!*\
+  !*** ./assets/js/animate.js ***!
+  \******************************/
+/***/ (() => {
+
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+gsap.registerPlugin(ScrollTrigger);
+var el = document.querySelector('.intro');
+gsap.registerPlugin(MotionPathPlugin);
+var rx = window.innerWidth < 1000 ? window.innerWidth / 1200 : 1;
+var ry = window.innerHeight < 700 ? window.innerHeight / 1200 : 1; //const path = [
+//    // 1
+//    {x: 0, y: 600},
+//    {x: 0, y: 500},
+//    {x: 0, y: 400},
+//    {x: 0, y: 300},
+//    {x: 0, y: 200},
+//    {x: 0, y: 100},
+//    {x: 0, y: 0},
+//];
+//const scaledPath = path.map(({ x, y }) => {
+//    return {
+//        x: x * rx,
+//        y: y * ry
+//    };
+//});
+
+var sections = document.querySelector('.intro');
+var rocket = document.querySelector('.rocket');
+var rocketTrail = document.querySelector('.rocket-trail');
+var tl = gsap.timeline({
+  scrollTrigger: {
+    start: 0,
+    trigger: el,
+    scrub: true,
+    pin: true,
+    pinSpacing: "margin",
+    end: function end() {
+      return "+=".concat(el.offsetHeight);
+    }
+  }
+}).from(rocket, {
+  y: 1500
+}).to(rocketTrail, {
+  //    motionPath: {
+  //        path: scaledPath,
+  //        align: 'self',
+  //        alignOrigin: [0.5, 0.5],
+  //    },
+  //            y: -1500,
+  //            scale: 1,
+  opacity: 1
+});
+
+/***/ }),
+
 /***/ "./assets/js/header.js":
 /*!*****************************!*\
   !*** ./assets/js/header.js ***!
@@ -3165,36 +3226,34 @@ jQuery(function ($) {
     $('.navbar-toggler-icon').toggleClass('active');
   });
 }); // Text on img with mousemove
-
-var title = document.querySelector('.img-title');
-var videoOverlay = document.querySelector('.video-mouse-overlay');
-
-var onMouseMove = function onMouseMove(e) {
-  var img = e.target.getBoundingClientRect();
-
-  if (e.target.classList.contains('img-container')) {
-    title.style.left = e.clientX - img.left + 'px';
-    title.style.top = e.clientY - img.top + 'px';
-    title.style.visibility = "visible";
-  } else if (!e.target.classList.contains('img-container')) {
-    title.style.visibility = "hidden";
-  }
-
-  if (e.target.classList.contains('overlay')) {
-    videoOverlay.style.left = e.clientX - img.left + 'px';
-    videoOverlay.style.top = e.clientY - img.top + 'px';
-    videoOverlay.style.visibility = "visible";
-  } else if (!e.target.classList.contains('overlay')) {
-    videoOverlay.style.visibility = "hidden";
-  }
-};
-
-$(".overlay").click(function () {
-  $("html,body").animate({
-    scrollTop: $(".img-container").offset().top
-  }, 600);
-});
-document.addEventListener('mousemove', onMouseMove); // star spinning animation
+//let title = document.querySelector('.img-title');
+//let videoOverlay = document.querySelector('.video-mouse-overlay');
+//const onMouseMove = (e) => {
+//    console.log(e.target);
+//    let img = e.target.getBoundingClientRect();
+////    if (e.target.classList.contains('img-container')) {
+////        title.style.left = e.clientX - img.left + 'px';
+////        title.style.top = e.clientY - img.top + 'px';
+////        title.style.visibility = "visible";
+////    } else if (!e.target.classList.contains('img-container')) {
+////        title.style.visibility = "hidden";
+////    }
+//    if (e.target.classList.contains('stars-background')) {
+//        videoOverlay.style.left = e.clientX - img.left + 'px';
+//        videoOverlay.style.top = e.clientY - img.top + 'px';
+//        videoOverlay.style.visibility = "visible";
+//    } else if (!e.target.classList.contains('stars-backgroud')) {
+//        videoOverlay.style.visibility = "hidden";
+//    }
+//};
+//$(".overlay").click(function () {
+//    $("html,body").animate({
+//        scrollTop: $(".img-container").offset().top
+//    }, 600);
+//}
+//)
+//document.addEventListener('mousemove', onMouseMove);
+// star spinning animation
 
 var deg = 0;
 var toggler = document.querySelector('.navbar-toggler-icon');
@@ -3240,9 +3299,7 @@ var rotateAnimation = function rotateAnimation() {
 
 $(document).ready(function () {
   $(".navbar-toggler-icon").click(rotateAnimation);
-}); // change video playback rate
-
-document.querySelector('video').playbackRate = 3.0;
+});
 
 /***/ }),
 
@@ -19209,6 +19266,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_header__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _aboutus__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./aboutus */ "./assets/js/aboutus.js");
 /* harmony import */ var _aboutus__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_aboutus__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _animate__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./animate */ "./assets/js/animate.js");
+/* harmony import */ var _animate__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_animate__WEBPACK_IMPORTED_MODULE_5__);
 // Import style
  // Import jQuery
 
@@ -19216,6 +19275,7 @@ __webpack_require__.r(__webpack_exports__);
 // You can specify which plugins you need
 
  // Import other script
+
 
 
  //init AOS

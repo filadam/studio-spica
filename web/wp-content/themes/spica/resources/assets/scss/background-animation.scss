@@ -13,13 +13,13 @@ and open the template in the editor.
 
 // n is number of stars required
 @function multiple-box-shadow ($n)  {
-    $colors: #ffffff, #e6d6ff, #d9d6ff, #d6e7ff, #d6fbff;
+    $colors: #ffffff, $tertiary, $primary, $secondary, $secondary;
     $key: random( length($colors) );
     $nth: nth( $colors, $key );
     $random: $nth !default;
     $value: '#{random(2000)}px #{random(2000)}px #{$nth}';
     @for $i from 2 through $n {
-        $colors: #ffffff, #e6d6ff, #d9d6ff, #d6e7ff, #d6fbff;
+        $colors: #ffffff, $tertiary, $primary, $secondary, $secondary;
         $key: random( length($colors) );
         $nth: nth( $colors, $key );
         $random: $nth !default;
@@ -31,13 +31,22 @@ $shadows-small:  multiple-box-shadow(700);
 $shadows-medium: multiple-box-shadow(200);
 $shadows-big:    multiple-box-shadow(100);
 
+.stars-background {
+    position: absolute;
+    overflow: hidden;
+    height:200vh;
+    z-index:8;
+}
+
 #stars {
     width: 1px;
     height: 1px;
     background: transparent;
     box-shadow: $shadows-small;
     animation: rotateStar 200ms linear infinite , animStar 90s linear infinite;
+    border-radius:50%;
     &:after {
+        border-radius:50%;
         content: " ";
         position: absolute;
         left: 2000px;
@@ -54,7 +63,9 @@ $shadows-big:    multiple-box-shadow(100);
     background: transparent;
     box-shadow: $shadows-medium;
     animation: rotateStar 200ms linear infinite , animStar 90s linear infinite;
+    border-radius:50%;
     &:after{
+        border-radius:50%;
         content: " ";
         position: absolute;
         left: 2000px;
@@ -71,7 +82,9 @@ $shadows-big:    multiple-box-shadow(100);
     background: transparent;
     box-shadow: $shadows-big;
     animation: rotateStar 200ms , animStar 90s linear infinite;
+    border-radius:50%;
     &:after{
+        border-radius:50%;
         content: " ";
         position: absolute;
         left: 2000px;
@@ -88,9 +101,3 @@ $shadows-big:    multiple-box-shadow(100);
     to		{
         transform: translateX(-2000px); }
 }
-/*@keyframes rotateStar {
-    from	{
-        box-shadow: $shadows-medium; }
-    to		{
-        box-shadow: $shadows-big; }
-}*/

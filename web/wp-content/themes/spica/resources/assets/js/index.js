@@ -12,6 +12,7 @@ import { Tooltip, Toast, Popover, Modal } from 'bootstrap';
 
 import './header';
 import './aboutus';
+import './animate';
 
 //init AOS
 

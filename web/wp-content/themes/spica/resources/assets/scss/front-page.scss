@@ -8,42 +8,19 @@ and open the template in the editor.
     Created on : Jun 14, 2021
     Author     : Web Solutions WEB Team <webmaster@web-solutions.eu>
 */
-.front-demo {
-    /*margin-top:50vh;*/
+.intro-wrapper {
     & h1 {
         font-weight: $font-weight-bold;
-        font-size: $font-size-xl;
+        font-size: $font-size-xxl;
         text-transform: uppercase;
         text-align:justify;
         font-family: $font-family-base;
-        /*font-weight: $font-weight-lighter;*/
+        color:$tertiary;
+        text-shadow: 5px 5px $tertiary;
+        color: $secondary;
     }
 }
-.video {
-    position: relative;
-    background-color: #000;
-    height: 100vh;
-    min-height: 25rem;
-    width: 100%;
-    overflow: hidden;
-    @media (max-width: 764px) {
-        height: 100vh;
-        width: 100%;
-        margin: 0px!important;
-    }
-}
-.front-video {
-    filter: grayscale(1);
-    object-fit: cover;
-};
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    & * {
-        pointer-events: none;
-    }
+.intro {
+    background-color:$primary;
+    height:100vh;
 }

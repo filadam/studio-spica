@@ -14,7 +14,7 @@
 </div><!-- #primary -->
 </div><!-- #content -->
 
-<?php get_template_part('template-parts/footer/footer', 'layout'); ?>
+<?php /* get_template_part('template-parts/footer/footer', 'layout'); */ ?> 
 
 </div><!-- #page -->
 

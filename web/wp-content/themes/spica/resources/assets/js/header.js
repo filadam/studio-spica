@@ -13,33 +13,34 @@ jQuery(function ($) {
 
 // Text on img with mousemove
 
-let title = document.querySelector('.img-title');
-let videoOverlay = document.querySelector('.video-mouse-overlay');
-const onMouseMove = (e) => {
-    let img = e.target.getBoundingClientRect();
-    if (e.target.classList.contains('img-container')) {
-        title.style.left = e.clientX - img.left + 'px';
-        title.style.top = e.clientY - img.top + 'px';
-        title.style.visibility = "visible";
-    } else if (!e.target.classList.contains('img-container')) {
-        title.style.visibility = "hidden";
-    }
-    if (e.target.classList.contains('overlay')) {
-        videoOverlay.style.left = e.clientX - img.left + 'px';
-        videoOverlay.style.top = e.clientY - img.top + 'px';
-        videoOverlay.style.visibility = "visible";
-    } else if (!e.target.classList.contains('overlay')) {
-        videoOverlay.style.visibility = "hidden";
-    }
-};
-$(".overlay").click(function () {
-    $("html,body").animate({
-        scrollTop: $(".img-container").offset().top
-    }, 600);
-}
-)
+//let title = document.querySelector('.img-title');
+//let videoOverlay = document.querySelector('.video-mouse-overlay');
+//const onMouseMove = (e) => {
+//    console.log(e.target);
+//    let img = e.target.getBoundingClientRect();
+////    if (e.target.classList.contains('img-container')) {
+////        title.style.left = e.clientX - img.left + 'px';
+////        title.style.top = e.clientY - img.top + 'px';
+////        title.style.visibility = "visible";
+////    } else if (!e.target.classList.contains('img-container')) {
+////        title.style.visibility = "hidden";
+////    }
+//    if (e.target.classList.contains('stars-background')) {
+//        videoOverlay.style.left = e.clientX - img.left + 'px';
+//        videoOverlay.style.top = e.clientY - img.top + 'px';
+//        videoOverlay.style.visibility = "visible";
+//    } else if (!e.target.classList.contains('stars-backgroud')) {
+//        videoOverlay.style.visibility = "hidden";
+//    }
+//};
+//$(".overlay").click(function () {
+//    $("html,body").animate({
+//        scrollTop: $(".img-container").offset().top
+//    }, 600);
+//}
+//)
 
-document.addEventListener('mousemove', onMouseMove);
+//document.addEventListener('mousemove', onMouseMove);
 
 // star spinning animation
 
@@ -82,7 +83,3 @@ let rotateAnimation = () => {
 $(document).ready(function () {
     $(".navbar-toggler-icon").click(rotateAnimation);
 });
-
-// change video playback rate
-
-document.querySelector('video').playbackRate = 3.0;

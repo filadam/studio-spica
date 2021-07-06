@@ -8,9 +8,11 @@ and open the template in the editor.
     Created on : Jun 23, 2021
     Author     : SPICA Filip Adamczyk
 */
-
-.about-us-container {
+.about {
     height: 100vh;
+    background-color:$tertiary;
+}
+.about-us-container {
     * p:not(.card) p:not(.card-text) {
         color:$primary;
         text-align: justify;
