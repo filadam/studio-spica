@@ -10456,6 +10456,30 @@ $(document).ready(function () {
 
 /***/ }),
 
+/***/ "./assets/js/loader.js":
+/*!*****************************!*\
+  !*** ./assets/js/loader.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+/* provided dependency */ var $ = __webpack_require__(/*! ./node_modules/jquery */ "./node_modules/jquery/dist/jquery.js");
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+//
+$('.loader-wrapper').delay(3000).queue(function (next) {
+  $(this).css('top', '-100%');
+  next();
+});
+$('.exhaust-fumes').delay(1000).queue(function (firstStep) {
+  $(this).css('visibility', 'visible');
+  firstStep();
+});
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.esm.js":
 /*!*********************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.esm.js ***!
@@ -26420,6 +26444,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _aboutus__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./aboutus */ "./assets/js/aboutus.js");
 /* harmony import */ var _aboutus__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_aboutus__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _animate__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./animate */ "./assets/js/animate.js");
+/* harmony import */ var _loader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./loader */ "./assets/js/loader.js");
+/* harmony import */ var _loader__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_loader__WEBPACK_IMPORTED_MODULE_6__);
 // Import style
  // Import jQuery
 
@@ -26427,6 +26453,7 @@ __webpack_require__.r(__webpack_exports__);
 // You can specify which plugins you need
 
  // Import other script
+
 
 
 

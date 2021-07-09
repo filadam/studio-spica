@@ -8,7 +8,7 @@
 get_header();
 
 ?>
-
+<?php get_template_part('template-parts/content/loader'); ?>
 <div class="row m-0 x">
     <div class="stars-background">
         <div id="stars"></div>
@@ -20,6 +20,7 @@ get_header();
     </section> 
     <section class="about m-0 g-0">
         <?php get_template_part('template-parts/front-page/front', 'about'); ?>
+
     </section> 
 
     <?php /* get_template_part('template-parts/front-page/front', 'about'); */ ?> 

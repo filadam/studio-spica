@@ -1,0 +1,199 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    File name  : loader.scss
+    Created on : Jul 9, 2021
+    Author     : Web Solutions WEB Team <webmaster@web-solutions.eu>
+*/
+::-webkit-scrollbar {
+    display: none;
+}
+.loader-wrapper {
+    visibility:visible;
+    position: fixed;
+    transition: top cubic-bezier(0.17, 0.04, 0.03, 0.94);
+    overflow:hidden;
+    width:100%;
+    height:100%;
+    top:0%;
+    background-color:$primary;
+    transition:500ms;
+    z-index:1000;
+}
+
+.rocket-loader {
+    z-index:2;
+    top:30%;
+    left:48%;
+    right:50%;
+    transform: 
+        scale(0.5) ;
+    position: absolute;
+    width: 80px;
+    /*    left: 50%;
+        right:50%;
+        top:50%;
+        bottom:50%;*/
+    animation: fly 1s 1;
+    animation-fill-mode: forwards;
+    animation-delay:2s;
+    @media (max-width:768px) {
+        display:none;
+    }
+    @media (max-width:1024px) {
+        display:none;
+    }
+}
+.exhaust-fumes {
+
+
+}
+.exhaust-fumes li {
+    width: 60px;
+    height: 60px;
+    background-color: $white;
+    list-style: none;
+    position: absolute;
+    border-radius: 100%;
+    transition:300ms;
+    &:first-child {
+        visibility: hidden;
+        width: 200px;
+        height: 200px;
+        bottom: -300px;
+        animation: fumes 0.5s infinite;
+    }
+    &:nth-child(2) {
+        width: 150px;
+        height: 150px;
+        left: -120px;
+        top: 260px;
+        animation: fumes 0.6s infinite;
+    }
+    &:nth-child(3) {
+        width: 120px;
+        height: 120px;
+        left: -40px;
+        top: 330px;
+        animation: fumes 0.7s 1s infinite;
+    }
+    &:nth-child(4) {
+        width: 100px;
+        height: 100px;
+        left: -170px;
+        animation: fumes 0.8s 1s infinite;
+        top: 380px;
+    }
+    &:nth-child(5) {
+        width: 130px;
+        height: 130px;
+        left: -120px;
+        top: 350px;
+        animation: fumes 0.9s infinite;
+    }
+    &:nth-child(6) {
+        width: 200px;
+        height: 200px;
+        left: -60px;
+        top: 280px;
+        animation: fumes2 0.6s infinite;
+    }
+    &:nth-child(7) {
+        width: 100px;
+        height: 100px;
+        left: -100px;
+        top: 320px;
+    }
+    &:nth-child(8) {
+        width: 110px;
+        height: 110px;
+        left: 70px;
+        top: 340px;
+    }
+    &:nth-child(9) {
+        width: 90px;
+        height: 90px;
+        left: 200px;
+        top: 380px;
+        animation: fumes 0.8s infinite;
+    }
+}@keyframes fumes {
+    50% {
+        transform: scale(1.5);
+        background-color: transparent;
+    }
+    51% {
+        transform: scale(0.8);
+    }
+    100% {
+        background-color: $white;
+        transform: scale(1)
+    }
+}
+@keyframes exhaust {
+    0% {
+        background: linear-gradient(to bottom, transparent 10%, $white 100%);
+    }
+    50% {
+        background: linear-gradient(to bottom, transparent 8%, $white 100%);
+    }
+    75% {
+        background: linear-gradient(to bottom, transparent 12%, $white 100%);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate3d(0px, 0px, 0);
+    }
+    50% {
+        transform: translate3d(0px, -4px, 0);
+    }
+    100% {
+        transform: translate3d(0px, 0px, 0);
+    }
+}
+
+@keyframes exhaust {
+    0% {
+        background: linear-gradient(to top, transparent 10%, $white 100%);
+    }
+    50% {
+        background: linear-gradient(to top, transparent 8%, $white 100%);
+    }
+    75% {
+        background: linear-gradient(to top, transparent 12%, $white 100%);
+    }
+}
+
+@keyframes twinkle {
+    80% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+}
+
+@keyframes fly {
+    0% {
+       
+        
+    }
+    100% {
+        top: -1000px;
+        visibility:hidden;
+    }
+}
+
+
+
+.planet {
+    position:absolute;
+    top:60%;
+    right:40%;
+    left:50%;
+    transform:scale(3);
+    z-index:1;
+}

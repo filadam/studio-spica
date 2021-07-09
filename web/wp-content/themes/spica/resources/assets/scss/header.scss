@@ -48,7 +48,7 @@
     width:100%;
     height:100%;
     top:-100%;
-    background-color:black;
+    background-color:$tertiary;
     transition:500ms;
     z-index:998;
     .nav {
@@ -68,10 +68,10 @@
     .header-nav {
         visibility: hidden;
         & li a {
-            color:$secondary;
+            color:$primary;
             &:hover {
                 transition:500ms;
-                color: $tertiary;
+                color: $secondary;
                 font-family: $font-family-bungee-outline;
             }
             &:not(:hover) {
