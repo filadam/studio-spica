@@ -23,7 +23,7 @@
             <div class="row g-0"> 
                 <div class="col p-0">
                     <div class="card card-flip star-sm">
-                        <div class="card-front bg-quaternary text-white">
+                        <div class="card-front bg-secondary text-black">
                             <div class="card-body d-flex flex-column justify-content-between">
                                 <h3 class="card-title">1</h3>
                                 <h3 class="card-title"><?php _e('SŁUCHAMY I POZNAJEMY') ?></h3>
@@ -50,7 +50,7 @@
                                 <h3 class="card-title"><?php _e('KONCEPCJA I PROJEKT') ?></h3>
                             </div>
                         </div>
-                        <div class="card-back bg-quaternary text-white">
+                        <div class="card-back bg-secondary text-primary">
                             <div class="card-body d-flex flex-column justify-content-between">
                                 <h3 class="card-title"><i class="bi bi-box"></i></h3>
                                 <p class="card-text"><?php

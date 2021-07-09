@@ -53,9 +53,9 @@ and open the template in the editor.
     background-color:black;
     box-shadow: 0 0 0 0px $tertiary;
     mix-blend-mode:multiply;
-    /*border-radius: 50%;*/
     transition-delay: 300ms;
     transition-duration:1000ms;
+    border-radius:50%;
 }
 
 /*
