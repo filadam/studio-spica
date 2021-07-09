@@ -7,10 +7,7 @@
 
 ?>
 
-<div class="container-fluid py-lg-5">
-<!--    <div id="stars"></div>
-    <div id="stars2"></div>
-    <div id="stars3"></div>-->
+<div class="container-fluid py-lg-5 px-3">
     <div class="row">
         <div class="col-xl-7 col-sm-12 about-us-container d-flex align-items-center justify-content-center px-3 py-3 flex-column">
             <div class="row d-flex align-items-center justify-content-center ">

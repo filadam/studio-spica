@@ -82,4 +82,11 @@ let rotateAnimation = () => {
 };
 $(document).ready(function () {
     $(".navbar-toggler-icon").click(rotateAnimation);
+    
+//    stars background height
+    let bg = $('.stars-background');
+    let pinOverlay = $('.pin-spacer').outerHeight(true);
+    bg.css("height", pinOverlay + "px")
 });
+
+

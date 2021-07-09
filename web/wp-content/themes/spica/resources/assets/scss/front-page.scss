@@ -18,9 +18,15 @@ and open the template in the editor.
         color:$tertiary;
         text-shadow: 5px 5px $tertiary;
         color: $secondary;
+        @media (max-width:768px){
+            font-size: $font-size-l;
+            text-align: center;
+        }
     }
 }
 .intro {
+
+    scroll-snap-stop: always;
     background-color:$primary;
     height:100vh;
 }
