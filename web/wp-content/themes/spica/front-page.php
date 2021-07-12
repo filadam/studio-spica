@@ -22,9 +22,12 @@ get_header();
         <?php get_template_part('template-parts/front-page/front', 'about'); ?>
 
     </section> 
+<!--    <section class="projects m-0 g-0">
+    <?php
+    /* get_template_part('template-parts/front-page/front', 'projects'); ?> */
+//    </section>-->
 
-    <?php /* get_template_part('template-parts/front-page/front', 'about'); */ ?> 
-    <?php /* get_template_part('template-parts/front-page/front', 'projects'); */ ?>
+    ?> 
 
 </div>
 

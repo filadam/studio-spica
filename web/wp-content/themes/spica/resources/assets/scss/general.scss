@@ -52,6 +52,7 @@ body:after {
     -ms-user-select: none;
     user-select: none;
     pointer-events: none;
+    z-index:1001;
 }
 
 @keyframes grain {

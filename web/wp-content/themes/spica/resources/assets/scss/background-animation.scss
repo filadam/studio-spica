@@ -13,13 +13,13 @@ and open the template in the editor.
 
 // n is number of stars required
 @function multiple-box-shadow ($n)  {
-    $colors: #ffffff, $tertiary, $primary, $secondary, $secondary;
+    $colors: #ffffff, $tertiary, #ffffff, $secondary, $secondary;
     $key: random( length($colors) );
     $nth: nth( $colors, $key );
     $random: $nth !default;
     $value: '#{random(2000)}px #{random(2000)}px #{$nth}';
     @for $i from 2 through $n {
-        $colors: #ffffff, $tertiary, $primary, $secondary, $secondary;
+        $colors: #ffffff, $tertiary, #ffffff, $secondary, $secondary;
         $key: random( length($colors) );
         $nth: nth( $colors, $key );
         $random: $nth !default;
@@ -32,11 +32,9 @@ $shadows-medium: multiple-box-shadow(200);
 $shadows-big:    multiple-box-shadow(100);
 
 .stars-background {
-    position: absolute;
+    position: fixed;
     overflow: hidden;
-    height:200vh;
-    /*max-height: 947px+200px;*/
-    z-index:8;
+    z-index:0;
 }
 
 #stars {

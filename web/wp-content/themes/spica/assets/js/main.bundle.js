@@ -10310,7 +10310,22 @@ gsap.registerPlugin(ScrollTrigger, MotionPathPlugin); //var rocketSVG = SVG().ad
 
 var el = document.querySelector('.intro');
 var rocket = document.querySelector('.rocket');
-var rocketTrail = document.querySelector('.rocket-trail');
+var rocketTrail = document.querySelector('.rocket-trail'); //const tls = gsap.timeline({
+//    scrollTrigger: {
+//        start: "top top",
+//        trigger: ("body"),
+//        scrub: 1,
+////        pin: true,
+////        pinSpacing: "margin",
+//        end: "bottom bottom",
+//        markers: true,
+//    },
+//
+//})
+//tls.to(('.intro'), {
+//    rotate:270,
+//})
+
 var tl = gsap.timeline({
   scrollTrigger: {
     start: 1,
@@ -10318,7 +10333,7 @@ var tl = gsap.timeline({
     scrub: 1,
     pin: true,
     pinSpacing: "margin",
-    end: "+=200" //        markers: true,
+    end: "+=1900" //        markers: true,
 
   }
 });
@@ -10329,7 +10344,18 @@ var tle = gsap.timeline({
     scrub: 1,
     pin: true,
     pinSpacing: "margin",
-    end: "+=200"
+    end: "+=1900"
+  }
+});
+var tli = gsap.timeline({
+  scrollTrigger: {
+    start: "center top",
+    trigger: ".about",
+    scrub: 1,
+    //        pin: true,
+    //        pinSpacing: "margin",
+    end: "bottom bottom",
+    markers: true
   }
 });
 ScrollTrigger.matchMedia({
@@ -10350,6 +10376,13 @@ ScrollTrigger.matchMedia({
     tle.to(rocketTrail, {
       delay: 1,
       opacity: 1
+    });
+    tli.to(".about", {
+      transition: "200ms",
+      //            duration: 0.1, 
+      //            y: -2000,
+      scale: 0 //            backgroundBlendMode: "luminosity",
+
     });
   }
 });
@@ -10469,11 +10502,11 @@ $(document).ready(function () {
  * and open the template in the editor.
  */
 //
-$('.loader-wrapper').delay(3000).queue(function (next) {
+$('.loader-wrapper').delay(10).queue(function (next) {
   $(this).css('top', '-100%');
   next();
 });
-$('.exhaust-fumes').delay(1000).queue(function (firstStep) {
+$('.exhaust-fumes').delay(10).queue(function (firstStep) {
   $(this).css('visibility', 'visible');
   firstStep();
 });

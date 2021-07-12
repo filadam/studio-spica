@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 //
-$('.loader-wrapper').delay(3000).queue(function (next) {
+$('.loader-wrapper').delay(10).queue(function (next) {
     $(this).css('top', '-100%');
     next();
 });
                 
 
-$('.exhaust-fumes').delay(1000).queue(function (firstStep) {
+$('.exhaust-fumes').delay(10).queue(function (firstStep) {
     $(this).css('visibility', 'visible');
     firstStep();
 })

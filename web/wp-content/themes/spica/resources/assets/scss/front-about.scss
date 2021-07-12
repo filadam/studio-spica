@@ -9,8 +9,15 @@ and open the template in the editor.
     Author     : SPICA Filip Adamczyk
 */
 .about {
-    height: 100vh;
-    background-color:$tertiary;
+    /*background-color:$tertiary;*/
+    background-image:url('./moonbg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index:1;
+    margin-top:-300px!important;
+}
+.g {
+    margin-top: 200px;
 }
 .about-us-container {
     * p:not(.card) p:not(.card-text) {

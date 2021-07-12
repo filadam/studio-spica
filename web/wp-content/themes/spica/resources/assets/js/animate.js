@@ -33,6 +33,22 @@ import { SVG } from '@svgdotjs/svg.js'
 const el = document.querySelector('.intro');
 const rocket = document.querySelector('.rocket');
 const rocketTrail = document.querySelector('.rocket-trail');
+//const tls = gsap.timeline({
+//    scrollTrigger: {
+//        start: "top top",
+//        trigger: ("body"),
+//        scrub: 1,
+////        pin: true,
+////        pinSpacing: "margin",
+//        end: "bottom bottom",
+//        markers: true,
+//    },
+//
+//})
+
+//tls.to(('.intro'), {
+//    rotate:270,
+//})
 
 const tl = gsap.timeline({
     scrollTrigger: {
@@ -41,7 +57,7 @@ const tl = gsap.timeline({
         scrub: 1,
         pin: true,
         pinSpacing: "margin",
-        end: "+=200",
+        end: "+=1900",
 //        markers: true,
     },
 
@@ -53,7 +69,20 @@ const tle = gsap.timeline({
         scrub: 1,
         pin: true,
         pinSpacing: "margin",
-        end: "+=200",
+        end: "+=1900",
+    },
+
+})
+
+const tli = gsap.timeline({
+    scrollTrigger: {
+        start: "center top",
+        trigger: (".about"),
+        scrub: 1,
+//        pin: true,
+//        pinSpacing: "margin",
+        end: "bottom bottom",
+        markers: true,
     },
 
 })
@@ -75,6 +104,13 @@ ScrollTrigger.matchMedia({
         tle.to(rocketTrail, {
             delay: 1,
             opacity: 1,
+        })
+        tli.to((".about"), {
+            transition: "200ms",
+//            duration: 0.1, 
+//            y: -2000,
+            scale: 0,
+//            backgroundBlendMode: "luminosity",
         })
     },
 });

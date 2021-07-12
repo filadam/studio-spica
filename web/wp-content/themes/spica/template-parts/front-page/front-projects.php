@@ -7,7 +7,7 @@
 
 ?>
 <div class="container-fluid py-5">
-    <div class="row bg-quaternary">
+    <div class="row">
         <div class="col">
         </div>
         <div class="col">
@@ -18,7 +18,7 @@
             </div>
         </div>
     </div>
-    <div class="row bg-tertiary">
+    <div class="row">
         <div class="col">
             <div class="img-container my-5" data-aos="zoom-in">
                 <div class="img-title" style="">SNUGLY</div>
@@ -30,7 +30,7 @@
 
         </div>
     </div>
-    <div class="row bg-primary">
+    <div class="row">
         <div class="col">
         </div>
         <div class="col">
