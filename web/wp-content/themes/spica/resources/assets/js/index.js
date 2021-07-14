@@ -12,9 +12,11 @@ import { Tooltip, Toast, Popover, Modal } from 'bootstrap';
 
 import './header';
 import './aboutus';
-import './animate';
+import './intro-timeline';
+import './horizon-timeline';
 import './loader';
 
 //init AOS
 
 AOS.init();
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);

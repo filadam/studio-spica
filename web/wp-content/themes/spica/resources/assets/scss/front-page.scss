@@ -9,13 +9,19 @@ and open the template in the editor.
     Author     : Web Solutions WEB Team <webmaster@web-solutions.eu>
 */
 .intro-wrapper {
+    /*background-image: linear-gradient(to right bottom, #f4ddb5, #e3d0ac, #d3c3a3, #c3b79a, #b3aa91);*/
+    background-color: #857363;
+    padding: 5rem;
+    background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");   
+    @media (max-width:768px){
+            padding: 1rem;
+        }
     & h1 {
         font-weight: $font-weight-bold;
-        font-size: $font-size-xxl;
+        font-size: $font-size-xl * 2.5;
         text-transform: uppercase;
-        text-align:justify;
+        text-align:left;
         font-family: $font-family-base;
-        color:$tertiary;
         text-shadow: 5px 5px $tertiary;
         color: $secondary;
         @media (max-width:768px){
@@ -25,8 +31,19 @@ and open the template in the editor.
     }
 }
 .intro {
-
+    border:solid 0px $secondary;
     scroll-snap-stop: always;
     background-color:transparent;
     height:100vh;
+}
+.moon-bg {
+    height:0px;
+    background-image:url('./img/moonbg2.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index:1;
+    bottom:0;
+    position:absolute;
+    mix-blend-mode: saturation;
 }

@@ -8,7 +8,7 @@
 ?>
 
 <div class="container-fluid py-lg-5 px-3">
-    <div class="row g">
+    <div class="row">
         <div class="col-xl-7 col-sm-12 about-us-container d-flex align-items-center justify-content-center px-3 py-3 flex-column mt-5">
             <div class="row d-flex align-items-center justify-content-center ">
                 <h1 class="text-white">
@@ -94,41 +94,5 @@
         <!--<div class="col-xl-5 col-sm-12 mt-5 about-us-container-pt align-self-center">-->
 
         <!--</div>-->
-    </div>
-    <div class="container-fluid py-5 my-5">
-        <div class="row">
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
-            <div class="col">
-                <div class="img-container my-5" data-aos="zoom-in">
-                    <div class="img-title" style="">SNUGLY</div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="img-container my-5" data-aos="zoom-in">
-                    <div class="img-title" style="">SNUGLY</div>
-                </div>
-            </div>
-            <div class="col">
-            </div>
-            <div class="col">
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
-            <div class="col">
-                <div class="img-container my-5" data-aos="zoom-in">
-                    <div class="img-title" style="">SNUGLY</div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>

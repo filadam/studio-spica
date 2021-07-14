@@ -32,7 +32,9 @@ $shadows-medium: multiple-box-shadow(200);
 $shadows-big:    multiple-box-shadow(100);
 
 .stars-background {
-    position: fixed;
+    background-color: #38312a91;
+    mix-blend-mode: color-burn;
+    position: absolute;
     overflow: hidden;
     z-index:0;
 }

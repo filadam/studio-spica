@@ -27,6 +27,7 @@ body {
 .site-content {
     background-color: $primary;
     overflow-x:hidden;
+
 }
 
 // button
@@ -53,6 +54,7 @@ body:after {
     user-select: none;
     pointer-events: none;
     z-index:1001;
+    backdrop-filter: blur(0.7px);
 }
 
 @keyframes grain {

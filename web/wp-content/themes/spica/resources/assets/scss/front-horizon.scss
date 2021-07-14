@@ -1,0 +1,34 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    File name  : front-horizon.scss
+    Created on : Jul 14, 2021
+    Author     : Web Solutions WEB Team <webmaster@web-solutions.eu>
+*/
+
+.horizon-wrapper {
+    height:100vh;
+    padding:5rem;
+    background-color: #857363;
+    background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");   
+}
+
+.sun {
+    transition:1000ms;
+    position:absolute;
+    background-color: #ffb700;
+    height:300px;
+    width:300px;
+    border-radius: 50%;
+}
+.sky {
+    transition:1000ms;
+    margin:1px;
+    /*position:absolute;*/
+    width:10px;
+    height:100%;
+    background-color:#000000ba;
+}
