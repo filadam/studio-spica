@@ -10,22 +10,58 @@ and open the template in the editor.
 */
 
 .horizon-wrapper {
-    height:100vh;
+    height:200vh;
     padding:5rem;
     background-color: #857363;
     background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");   
+    @media (max-width: 764px) {
+        padding:0rem!important;
+    }
 }
-
+.horizon {
+    background-color: #dadada;
+    padding: 10px;
+    mix-blend-mode: color-burn;
+}
 .sun {
     transition:1000ms;
     position:absolute;
     background-color: #ffb700;
-    height:300px;
-    width:300px;
+    height:400px;
+    width:400px;
     border-radius: 50%;
+    visibility:visible;
+    & p {
+        transition:1000ms;
+        color: #dc9e00;
+    }
+    & i {
+        transition:1000ms;
+        color: #dc9e00;
+        font-size: $font-size-xl;
+    }
+}
+.earth {
+    transition:1000ms;
+    position:absolute;
+    background-color: lightblue;
+    height:0px;
+    width:400px;
+    border-radius: 50%;
+    /*visibility:hidden;*/
+    & p {
+        transition:1000ms;
+        font-size: 0px;
+        color: #82c2d6;
+    }
+    & i {
+        transition:1000ms;
+        color: #82c2d6;
+        font-size: 0px;
+    }
 }
 .sky {
-    transition:1000ms;
+    transition:100ms;
     margin:1px;
     /*position:absolute;*/
     width:10px;
